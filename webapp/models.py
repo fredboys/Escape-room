@@ -40,6 +40,6 @@ class Booking(models.Model):
     time = models.TimeField(default=datetime.time(12, 00))
 
     def save(self, *args, **kwargs):
-        if self.date_for_visit < datetime.date.today():
+        if self.date < datetime.date.today():
             raise ValidationError("The date cannot be in the past!")
-        super(PlaceBooking, self).save(*args, **kwargs)
+        super(Booking, self).save(*args, **kwargs)
