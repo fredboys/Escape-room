@@ -9,17 +9,16 @@ class Room(models.Model):
     """
     Room model
     """
-    name_of_room = models.CharField(max_length=100)
-    title = models.CharField(max_length=150, unique=True)
-    capacity = models.PositiveSmallIntegerField()
+    name = models.CharField(max_length=100)
+    capacity = models.IntegerField()
     description = models.TextField()
     image = CloudinaryField('image', default='placeholder')
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.DecimalField(max_digits=5, decimal_places=2)
     duration = models.DecimalField(max_digits=3, decimal_places=0)
 
     def __str__(self):
-        #  Returns a string of title of treatment
-        return f"{self.title}"
+        #  Returns a string of name of escape room
+        return f"{self.name}"
 
 
 class Booking(models.Model):
