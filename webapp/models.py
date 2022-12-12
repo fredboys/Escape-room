@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from users.models import User
 import datetime
 
 
@@ -34,7 +33,7 @@ class Booking(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
-    phone = PhoneNumberField()
+    phone = models.CharField(max_length=16)
     date = models.DateField(null=True)
     time = models.TimeField(default=datetime.time(12, 00))
 
