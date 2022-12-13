@@ -29,13 +29,18 @@ class Booking(models.Model):
         related_name="user",
         on_delete=models.CASCADE,
         )
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     email = models.EmailField()
     phone = models.CharField(max_length=16)
     date = models.DateField(null=True)
     time = models.TimeField(default=datetime.time(12, 00))
+    room_name = models.ForeignKey(
+        Room,
+        related_name="room_name",
+        on_delete=models.PROTECT,
+        null=True
+        )
 
     def save(self, *args, **kwargs):
         if self.date < datetime.date.today():
