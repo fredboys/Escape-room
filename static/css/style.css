@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab:wght@200&display=swap'); 
+
+.nav-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 150%;
+}
+
+.navbar, footer {
+    background-color: rgb(141, 110, 151);
+}
+
+.site_logo {
+    height: 150px;
+    width: 400px;
+}
+
+.nav-bg-design {
+    text-align: center;
+}
