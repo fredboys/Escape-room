@@ -47,3 +47,37 @@ footer {
 h6, p {
     color: black;
 }
+
+.hero-image {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  /* Centered text */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.hero-text {
+    font-size: 400%;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    font-weight: 900;
+}
+
+.hero-btn {
+    margin-top: 10px;
+}
+
+.hero-btn > button {
+    color: white;
+    border-color: white;
+}
