@@ -6,7 +6,7 @@
 }
 
 .navbar, footer {
-    background-color: rgb(141, 110, 151);
+    background-color: rgba(141, 110, 151, 0.719);
 }
 
 .site_logo {
@@ -16,4 +16,34 @@
 
 .nav-bg-design {
     text-align: center;
+}
+
+.copyright {
+    margin-bottom: 0;
+}
+
+.opening-times {
+    margin-bottom: 6px;
+}
+
+#map {
+    height: 250px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+}
+
+.footer-colour {
+    background-color: rgba(141, 110, 151, 0.719);
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+
+.footer-pad {
+    padding-top: 12px;
+}
+
+h6, p {
+    color: black;
 }
