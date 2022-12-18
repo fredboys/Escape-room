@@ -3,6 +3,7 @@
 .nav-link {
     font-family: 'Oswald', sans-serif;
     font-size: 150%;
+    color: white;
 }
 
 .navbar, footer {
@@ -10,8 +11,8 @@
 }
 
 .site_logo {
-    height: 150px;
-    width: 400px;
+    height: 100px;
+    width: 280px;
 }
 
 .nav-bg-design {
@@ -44,9 +45,7 @@ footer {
     padding-top: 12px;
 }
 
-h6, p {
-    color: black;
-}
+
 
 .hero-image {
     width: 100%;
@@ -82,38 +81,11 @@ h6, p {
     border-color: white;
 }
 
-
-
-.card-sl {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .card-image img {
     max-height: 100%;
     max-width: 100%;
     border-radius: 8px 8px 0px 0;
 } 
-
-.card-action {
-    position: relative;
-    float: right;
-    margin-top: -25px;
-    margin-right: 20px;
-    z-index: 2;
-    color: #E26D5C;
-    background: #fff;
-    border-radius: 100%;
-    padding: 15px;
-    font-size: 15px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card-action:hover {
-    color: #fff;
-    background: #E26D5C;
-    -webkit-animation: pulse 1.5s infinite;
-}
 
 .card-heading {
     font-size: 25px;
@@ -149,35 +121,24 @@ h6, p {
 
 }
 
-
-@-webkit-keyframes pulse {
-    0% {
-        -moz-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
-    }
-
-    70% {
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
-    }
-
-    100% {
-        -moz-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-        transform: scale(0.9);
-        box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
-    }
-}
-
-.popular-rooms {
+.home-page-header {
     font-size: 350%;
     font-family: 'Oswald', sans-serif;
     font-weight: 900;
     margin: 20px;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.about-us-text {
+    color: white;
+}
+
+
+.about-me-image {
+    border-radius: 6rem;
+    max-width: 90%;
 }

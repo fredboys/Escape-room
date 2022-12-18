@@ -71,19 +71,18 @@
         
         {% endblock %}
     </main>
-    <footer class="text-center text-lg-start bg-light text-muted mt-auto">
-
-        <section class="footer-colour">
-          <div class="container text-center text-md-start mt-5 footer-pad">
-            <!-- Grid row -->
-            <div class="row mt-3">
+      <footer class="text-center text-lg-start text-white footer-color">
+        <div class="container p-4 pb-0">
+          <section class="">
+            <!--Grid row-->
+            <div class="row">
               <!-- Grid column -->
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
+              <div class="col-md-12 col-lg-3 col-xl-3 mx-auto mt-3">
                 <div id="map"></div>
               </div>
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
+    
+              <!-- Grid column -->
+              <div class="col-md-12 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase fw-bold mb-4">
                   Opening Times
                 </h6>
@@ -95,9 +94,12 @@
                   <p class="opening-times">Saturday: 10am - 6pm</p>
                   <p class="opening-times">Sunday: 10am - 3pm</p>
               </div>
-
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
+    
+              <!-- Grid column -->
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <div class="col-md-12 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                 <p><i class="fas fa-home me-3"></i> London, WC2N 0BL</p>
                 <p><i class="fas fa-envelope me-3"></i>info@escape.com</p>
@@ -105,17 +107,55 @@
               </div>
               <!-- Grid column -->
             </div>
-            <!-- Grid row -->
-          </div>
-        </section>
-        <!-- Section: Links  -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-          <p class="copyright">© 2022 Copyright ESCAPE ROOM</p>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+    
+          <hr class="my-3">
+    
+          <!-- Section: Copyright -->
+          <section class="p-3 pt-0">
+            <div class="row d-flex align-items-center">
+              <!-- Grid column -->
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <!-- Copyright -->
+                <div class="p-3">
+                   <p class="text-white">© 2020 Copyright Escape Room</p>
+                </div>
+                <!-- Copyright -->
+              </div>
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <!-- Facebook -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-facebook-f"></i
+                  ></a>
+    
+                <!-- Twitter -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-twitter"></i
+                  ></a>
+                <!-- Instagram -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-instagram"></i
+                  ></a>
+              </div>
+              <!-- Grid column -->
+            </div>
+          </section>
+          <!-- Section: Copyright -->
         </div>
-        <!-- Copyright -->
+        <!-- Grid container -->
       </footer>
+      <!-- Footer -->
 
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
