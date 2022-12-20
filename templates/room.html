@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+{% for room in room_list %}
+<h2>{{ room.name }}</h2>
+<img src="{{ room.image.url }}" alt="">
+{% endfor %}
+{% endblock %}
