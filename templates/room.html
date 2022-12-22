@@ -3,8 +3,62 @@
 {% block content %}
 {% load static %}
 
+<div class="popular-room-header">
+    <h2 class="text-center home-page-header">
+        OUR ROOMS
+    </h2>
+</div>
+
 {% for room in room_list %}
-<h2>{{ room.name }}</h2>
-<img src="{{ room.image.url }}" alt="">
-{% endfor %}
+
+<section class="rooms">
+
+    <div class="container">
+        {% ifequal forloop.counter|divisibleby:"2" True %}
+
+        <div class="row align-items-center">
+            <div class="col-md-6 room-div">
+                <h2 class="projects-header">{{ room.name }}</h2>
+                <p>
+                    {{ room.description }}                       
+                </p>
+
+                <p class="project-skills"><strong>DETAILS</strong></p>
+                <p>£{{ room.price }} - {{ room.capacity }} capacity - {{ room.duration }} minutes</p>
+
+                <a href=""
+                class="btn btn-secondary btn-sm btn-card"
+                id="book-button">Book
+                Now!</a>
+            </div>
+            <div class="col-md-6 pro"><img src="{{ room.image.url}}" alt="" class="img-resize"></div>
+        </div>
+        {% else %}
+        <div class="row align-items-center">
+            <div class="col-md-6"><img src="{{ room.image.url}}" alt="" class="img-resize"></div>
+            <div class="col-md-6 room-div"><h2 class="projects-header">{{ room.name }}</h2>
+                <p>
+                    {{ room.description}}                        
+                </p>
+
+                <p class="project-skills"><strong>DETAILS</strong></p>
+                <p>£{{ room.price }} - {{ room.capacity }} capacity - {{ room.duration }} minutes</p>
+
+                <a href=""
+                    class="btn btn-secondary btn-sm btn-card "
+                    id="book-button">Book
+                    Now!</a>
+            </div>
+        </div>
+        {% endifequal %}
+        {% if forloop.count != forloop|length %}
+
+        <hr class="line-break">
+
+        {% endif %}
+    </div>
+        {% endfor %}
+</section>
+
+    
 {% endblock %}

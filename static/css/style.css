@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab:wght@200&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu&display=swap');
 
 .nav-link {
     font-family: 'Oswald', sans-serif;
@@ -37,7 +37,7 @@
 }
 
 footer {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 100%;
 }
 
@@ -100,8 +100,8 @@ footer {
 .card-text {
     padding: 10px 15px;
     background: #fff;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .card-button {
@@ -135,6 +135,7 @@ body {
 
 .about-us-text {
     color: white;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -186,4 +187,46 @@ body {
         height: 70px;
         width: 190px;
     }
+}
+
+.rooms {
+    color: #fff;
+}
+
+.projects-header {
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    color: rgba(141, 110, 151, 0.719);
+}
+
+.project-skills {
+    font-size: 20px;
+    margin-bottom: 0;
+    color: rgba(141, 110, 151, 0.719);
+}
+
+.img-resize {
+  max-width: 100%;
+  height: auto;
+}
+
+.project-section {
+    margin: 10px;
+}
+
+.room-div {
+    margin-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#book-button {
+    background-color: rgba(141, 110, 151, 0.719);
+    border-color: rgba(141, 110, 151, 0.719);
+}
+
+#book-button:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
 }
