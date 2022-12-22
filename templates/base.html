@@ -21,7 +21,7 @@
                 <img class="site_logo" src="{% static 'images/site_logo.png' %}"
                         alt="site logo">
               </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarText">
@@ -36,7 +36,7 @@
                     <a class="nav-link" href="#">Book</a>
                   </li>
                   <li class="nav-item nav-bg-design">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about_us">About</a>
                   </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -57,7 +57,7 @@
                         </ul>
                     </li>
                     {% else %}
-                    <li class="nav-item">
+                    <li class="nav-item nav-bg-design">
                         <a href="" class="nav-link">Login</a>
                     </li>
                     {% endif %}
