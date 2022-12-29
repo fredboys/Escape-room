@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu&display=swap');
 
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex; 
+    flex-direction: column;
+}
+
+header {
+    min-height: 50px;
+}
+
+footer {
+    min-height: 50px;
+}
+
+main {
+    flex: 1;
+}
+
 .nav-link {
     font-family: 'Oswald', sans-serif;
     font-size: 150%;
@@ -250,6 +269,16 @@ body {
     border-color: white;
 }
 
-.yes {
+.btn-margin {
     margin-bottom: 10px;
+}
+
+.login-text {
+    color: white;
+}
+
+.signup-link {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    color: rgba(141, 110, 151, 0.719);
 }
