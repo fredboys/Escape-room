@@ -12,6 +12,11 @@
 
 <p>{% blocktrans %}Already have an account? Then please <a class="signup-link" href="{{ login_url }}">Sign in</a>.{% endblocktrans %}</p>
 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+
 <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
@@ -20,5 +25,7 @@
   {% endif %}
   <button class="btn btn-light right" type="submit">{% trans "Sign Up" %}</button>
 </form>
-
+    </div>
+  </div>
+</div>
 {% endblock %}
