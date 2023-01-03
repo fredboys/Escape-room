@@ -279,3 +279,14 @@ footer {
     font-weight: 900;
     color: rgba(141, 110, 151, 0.719);
 }
+
+.booking-text {
+    color: white;
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: rgba(141, 110, 151, 0.719);
+    border-color: rgba(141, 110, 151, 0.719);
+    margin: 10px;
+}

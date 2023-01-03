@@ -1,6 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
 
 {% block content %}
-{% load static %}
+<div class="row">
+    <div class="col-md-4 mx-auto booking-text">
+      <!-- Shows the form only is user is logged in -->
+      {% if user.is_authenticated %}
+      <h3>Place your booking</h3>
+      <form method="post">
+        {{ form | crispy }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-secondary btn-lg btn-card submit-btn"
+        id="book-button">Submit</button>
+      </form>
+      {% else %}
+
+    
+      {% endif %}
+    </div>
+  </div>
 
 {% endblock %}
