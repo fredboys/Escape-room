@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from cloudinary.models import CloudinaryField
 import datetime
 
@@ -34,7 +35,7 @@ class Booking(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=16)
     date = models.DateField(null=True)
-    time = models.TimeField()
+    time = models.TimeField(default=datetime.time(12, 00))
     room_name = models.ForeignKey(
         Room,
         related_name="room_name",
@@ -46,3 +47,6 @@ class Booking(models.Model):
         if self.date < datetime.date.today():
             raise ValidationError("The date cannot be in the past!")
         super(Booking, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.first_name
