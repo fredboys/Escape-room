@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+      <!-- Shows the form only is user is logged in -->
+      {% if user.is_authenticated %}
+        {% if not booked %}
+          <div class="container login-text">
+            <div class=" booking-text">
+                <h3 class="login-book-header">Update Your Booking</h3>
+                <form method="post">
+                  {{ form | crispy }}
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-secondary btn-lg btn-card submit-btn"
+                  id="book-button">Update</button>
+                </form>
+            </div>
+          </div>
+        {% else %}
+          <h1>Thank you, we just sent you a confirmation email!</h1>
+        {% endif %}
+      {% else %}
+      <div class="container">
+        <div class=" booking-text">      
+
+        <h2 class="login-book-header">Make A Booking</h2>
+      <p class="">To place a new booking or see your exisiting ones you need to be logged in.
+        If you have not created an account yet, then please sign up first.</p>
+        <a href="{% url 'account_signup' %}" class="btn btn-primary booking-button">Signup</a>
+        <a href="{% url 'account_login' %}" class="btn btn-primary booking-button">Login</a>
+      {% endif %}
+      </div>
+      </div>
+{% endblock %}

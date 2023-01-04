@@ -39,3 +39,7 @@ def booking(request):
     
     return render(request, 'book.html', context)
 
+
+class Account(generic.TemplateView):
+    
+    template_name = 'my_booking.html'
