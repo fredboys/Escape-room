@@ -4,10 +4,10 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container login-text">
-    <div class=" booking-text">
       <!-- Shows the form only is user is logged in -->
       {% if user.is_authenticated %}
+<div class="container login-text">
+  <div class=" booking-text">
       <h3 class="login-book-header">Place Your Booking</h3>
       <form method="post">
         {{ form | crispy }}
@@ -15,16 +15,18 @@
         <button type="submit" class="btn btn-secondary btn-lg btn-card submit-btn"
         id="book-button">Submit</button>
       </form>
-
+  </div>
+</div>
       {% else %}
-      <div>
+      <div class="container">
+        <div class=" booking-text">      
+
         <h2 class="login-book-header">Make A Booking</h2>
       <p class="">To place a new booking or see your exisiting ones you need to be logged in.
         If you have not created an account yet, then please sign up first.</p>
         <a href="{% url 'account_signup' %}" class="btn btn-primary booking-button">Signup</a>
         <a href="{% url 'account_login' %}" class="btn btn-primary booking-button">Login</a>
-      </div>
       {% endif %}
-    </div>
-</div>
+      </div>
+      </div>
 {% endblock %}
