@@ -6,17 +6,21 @@
 {% block content %}
       <!-- Shows the form only is user is logged in -->
       {% if user.is_authenticated %}
-<div class="container login-text">
-  <div class=" booking-text">
-      <h3 class="login-book-header">Place Your Booking</h3>
-      <form method="post">
-        {{ form | crispy }}
-        {% csrf_token %}
-        <button type="submit" class="btn btn-secondary btn-lg btn-card submit-btn"
-        id="book-button">Submit</button>
-      </form>
-  </div>
-</div>
+        {% if not booked %}
+          <div class="container login-text">
+            <div class=" booking-text">
+                <h3 class="login-book-header">Place Your Booking</h3>
+                <form method="post">
+                  {{ form | crispy }}
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-secondary btn-lg btn-card submit-btn"
+                  id="book-button">Submit</button>
+                </form>
+            </div>
+          </div>
+        {% else %}
+          <h1>Thank you, we just sent you a confirmation email!</h1>
+        {% endif %}
       {% else %}
       <div class="container">
         <div class=" booking-text">      

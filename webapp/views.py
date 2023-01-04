@@ -21,12 +21,21 @@ class Rooms(generic.ListView):
     template_name = 'room.html'
 
 
-class Booking(CreateView):
-    '''
-    After submitting the form user details will be saved in the database
-    and users will be redirected to the manage booking page.
-    '''
-    template_name = 'book.html'
-    form_class = BookingForm
+def booking(request):
+    form = BookingForm()
+    booked = False
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+            booked = True
 
+    context = {
+        'form': form,
+        'booked': booked,
+        }
+    
+    return render(request, 'book.html', context)
 

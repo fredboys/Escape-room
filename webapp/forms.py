@@ -2,6 +2,7 @@ from .models import Booking, Room
 from django import forms
 import datetime
 
+
 class DateInput(forms.DateInput):
     input_type = 'date'
 
@@ -14,8 +15,7 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = ('first_name', 'last_name', 'email',  'phone',
-                  'date', 'time', 'room_name')
+        fields = ('first_name', 'last_name', 'email', 'phone', 'date', 'time', 'room_name')
         widgets = {
             'date': DateInput(attrs={
                 'min': datetime.date.today()+datetime.timedelta(days=0),
