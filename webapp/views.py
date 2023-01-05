@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.http import HttpResponseRedirect
@@ -40,6 +40,33 @@ def booking(request):
     return render(request, 'book.html', context)
 
 
-class Account(generic.TemplateView):
-    
-    template_name = 'my_booking.html'
+def account(request):
+    bookings = Booking.objects.filter(user=request.user)
+    context = {
+        'bookings': bookings
+    }
+
+    return render(request, 'my_booking.html', context)
+
+
+def update_booking(request, booking_id):
+    booking = Booking.objects.get(id=booking_id)
+    form = BookingForm(instance=booking)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('account')
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'edit_book.html', context)
+
+
+def delete_booking(request, booking_id):
+    booking = Booking.objects.get(id=booking_id)
+    booking.delete()
+    return redirect('account')
+
