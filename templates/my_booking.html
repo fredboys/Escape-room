@@ -1,10 +1,17 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6 mx-auto text-center">
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert {{ message.tags }} alert-success fade show success-msg" id="msg" role="alert">
+        <strong>{{message}}</strong>
+      </div>
+      {% endfor %}
+      {% endif %}
       <h1 class="text-center confirmation-header" style="margin: 3%;">My Bookings</h1>
       
       <div class="card" style="width: 100%; margin-bottom: 10px;">
@@ -38,5 +45,11 @@
     </div>
   </div>
 </div>
-
+<script>
+  setTimeout(function(){
+    let messages = document.getElementById("msg");
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
+  }, 3000);
+</script>
 {% endblock %}

@@ -346,3 +346,7 @@ footer {
     text-decoration: none;
     color: rgba(141, 110, 151, 0.719);
   }
+
+  .success-msg {
+    margin-top: 10px;
+  }
