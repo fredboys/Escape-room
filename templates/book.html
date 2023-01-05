@@ -19,7 +19,14 @@
             </div>
           </div>
         {% else %}
-          <h1>Thank you, we just sent you a confirmation email!</h1>
+        <div class="box">
+        <div class="text-center confirmation center">
+          <h1 class="confirmation-header">Thank you!</h1>
+          <h3>We look forward to seeing you play with us</h3>
+          <p>You will have recieved a confirmation email!</p>
+          <p>Manage your <a href="{% url 'account' %}" class="decoration"> Bookings</a></p>
+        </div>
+        </div>
         {% endif %}
       {% else %}
       <div class="container">

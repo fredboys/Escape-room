@@ -314,3 +314,34 @@ footer {
 .sign-in-text {
     color: white;
 }
+
+.confirmation-header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    color: rgba(141, 110, 151, 0.719);
+}
+
+.confirmation {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box {
+    height: 400px;
+    position: relative;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .decoration {
+    text-decoration: none;
+    color: rgba(141, 110, 151, 0.719);
+  }
