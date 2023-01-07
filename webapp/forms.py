@@ -8,7 +8,7 @@ class DateInput(forms.DateInput):
 
 
 class TimeInput(forms.TimeInput):
-    input_type = 'time'
+    input_type = 'text'
 
 
 class BookingForm(forms.ModelForm):
@@ -21,7 +21,5 @@ class BookingForm(forms.ModelForm):
                 'min': datetime.date.today()+datetime.timedelta(days=0),
                 'max': datetime.date.today()+datetime.timedelta(days=30)}),
             'time': TimeInput(attrs={
-                'min': "10:00",
-                'max': "18:00",
-                'step': "600"}),
+                'class': 'timepicker'}),
         }

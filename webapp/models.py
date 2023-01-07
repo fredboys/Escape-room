@@ -35,7 +35,7 @@ class Booking(models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=16)
     date = models.DateField(null=True)
-    time = models.TimeField(default=datetime.time(12, 00))
+    time = models.TimeField()
     room_name = models.ForeignKey(
         Room,
         related_name="room_name",
