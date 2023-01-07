@@ -58,6 +58,13 @@ def update_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
+            email_to = booking.email
+            subject = 'Your booking'
+            message = f'Hi {booking.first_name}, your booking on\
+                    {booking.date} has been updated.'
+            email_from = 'theescaperoomldn@gmail.com'
+            recipient_list = [email_to, ]
+            send_mail(subject, message, email_from, recipient_list)
             messages.success(request, 'Updated successfully!')
             return redirect('account')
 
