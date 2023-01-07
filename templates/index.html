@@ -12,7 +12,7 @@
         <h2 class="hero-text">To The</h2>
         <h2 class="hero-text">Escape Room</h2>
         <div class="hero-btn">
-            <button type="button" class="btn btn-outline btn-lg" id="home-book">BOOK TO PLAY</button>
+            <a class="btn btn-outline btn-lg" id="home-book" href="{% url 'book' %}">BOOK TO PLAY</a>
         </div>
     </div>
 </div>
@@ -41,7 +41,7 @@
                     <div class="card-text">
                         Can you and your team escape the haunted train before it's too late?
                     </div>
-                    <a href="#" class="card-button"> Book</a>
+                    <a href="{% url 'book' %}" class="card-button"> Book</a>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                     <div class="card-text">
                         Are you ready to claim your throne and escape the royal palace?
                     </div>
-                    <a href="#" class="card-button"> Book</a>
+                    <a href="{% url 'book' %}" class="card-button"> Book</a>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
                     <div class="card-text">
                         Are you ready to brave the wilds and escape the wooded realm?
                     </div>
-                    <a href="#" class="card-button"> Book</a>
+                    <a href="{% url 'book' %}" class="card-button"> Book</a>
                 </div>
             </div>
         </div>

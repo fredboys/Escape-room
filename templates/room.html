@@ -26,7 +26,7 @@
                 <p class="project-skills"><strong>DETAILS</strong></p>
                 <p>£{{ room.price }} - {{ room.capacity }} capacity - {{ room.duration }} minutes</p>
 
-                <a href=""
+                <a href="{% url 'book' %}"
                 class="btn btn-secondary btn-sm btn-card btn-margin"
                 id="book-button">Book
                 Now!</a>
@@ -44,7 +44,7 @@
                 <p class="project-skills"><strong>DETAILS</strong></p>
                 <p>£{{ room.price }} - {{ room.capacity }} capacity - {{ room.duration }} minutes</p>
 
-                <a href=""
+                <a href="{% url 'book' %}"
                     class="btn btn-secondary btn-sm btn-card"
                     id="book-button">Book
                     Now!</a>
