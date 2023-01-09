@@ -53,79 +53,131 @@ This is a booking application for an escape room company. If the consumer would 
 
 * [Acknowledgements](#acknowledgements)
 
-## User experience
+# User experience
 
 
-### Business goals
+## Business goals
 
-### User stories
+## User stories
 
-### Agile Methodology
+## Agile Methodology
 
-### Database diagram
+## Database diagram
 
-## Features
+# Features
 
-### Header
+## Header
 
-### Hero image
+## Hero image
 
-### Most popular rooms
+## Most popular rooms
 
-### About us
+## About us
 
-### Footer
+## Footer
 
-### Rooms
+## Rooms
 
-### Make a booking message
+## Make a booking message
 
-### Create an account 
+## Create an account 
 
-### Sign in 
+## Sign in 
 
-### Log out
+## Log out
 
-### Place your booking
+## Place your booking
 
-### Email confirmations
+## Email confirmations
 
-### Manage bookings
+## Manage bookings
 
-### Update booking
+## Update booking
 
-### Updated message
+## Updated message
 
-### Admin panel
+## Admin panel
 
-## Testing
+# Testing
 
-## Bugs
+# Bugs
 
-### Solved
+## Solved
 
-### Left to solve
+## Left to solve
 
-## Credits
+# Credits
 
-### Code 
+## Code 
 
-### Images
+## Images
 
-### Technology used
+## Technology used
 
-## Deployment
+Django - A model-view-template framework used to create Locksmith Booking
+Bootstrap - A CSS framework used for the front end development.
+HTML5 - Provides the content and structure for the website.
+CSS3 - Provides the styling for the website.
+JavaScript - Provides interactive elements of the website
+Python - Provides the functionality of the website.
+Gitpod - Used to create and edit the website.
+GitHub - Used to host the repository.
+GitBash - Terminal used to push changes to the GitHub repository.
+Google Chrome DevTools - Used to test responsiveness and debug.
+Cloudinary - Used to host all static files and images.
+Heroku - Used to deploy the website.
+PEP8 Validation - Used to validate Python code.
+HTML Validation - Used to validate HTML code.
+CSS Validation - Used to validate CSS code.
+JSHint Validation - Used to validate JavaScript code.
 
-### Local deployment
+# Deployment
 
-### Production delpoyment 
+## Local deployment
+To test the app locally, the terminal within VScode was used. The steps to run this:
 
-#### Create heroku app
+* In your project workspace folder, open a terminal
+* Run the command: python3 manage.py runserver
+* Hit the 'open browser' button or visit http://localhost:8000/ in the browser.
+* Use the website as usual.
 
-#### Connect postgres database
+A local database was used for most of the local deployment usage, since it was necessary for the automated tests to run. However, the switch to using the production database could be easily made, in case migrations needed to be performed or otherwise. Furthermore, in the development version, DEBUG was set to False, so error messages would show follow.
 
-#### Deploy app on Heroku
+## Production delpoyment 
+SongMates is deployed to Heroku, using an ElephantSQL Postgres database. To duplicate deployment to Heroku, follow these steps:
 
-#### PostgreSql
+* Fork or clone this repository in GitHub.
+* You will need a Cloudinary account to host user images and static files.
+* Login to Cloudinary.
+* Select the 'dashboard' option.
+* Copy the value of the 'API Environment variable' from the part starting cloudinary:// to the end. You may need to select the eye icon to view the full environment variable.Paste this value somewhere for safe keeping as you will need it shortly (but destroy after deployment).
+* Log in to Heroku.
+* Select 'Create new app' from the 'New' menu at the top right.
+* Enter a name for the app and select the appropriate region.
+* Select 'Create app'.
+* Select 'Settings' from the menu at the top.
+* Login to ElephantSQL.
+* Click 'Create new instance' on the dashboard.
+* Name the 'plan' and select the 'Tiny Turtle (free)' plan.
+* Select 'select region'.
+* Choose the nearest data centre to your location.
+* Click 'Review'.
+* Go to the ElephantSQL dashboard and click on the 'database instance name' for this project.
+* Copy the ElephantSQL database URL to your clipboard (this starts with postgres://).
+* Return to the Heroku dashboard.
+* Select the 'settings' tab.
+* Locate the 'reveal config vars' link and select.
+* Enter the following config var names and values:
+* CLOUDINARY_URL: your cloudinary URL as obtained above
+* DATABASE_URL: your ElephantSQL postgres database URL as obtained above
+* PORT: 8000
+* SECRET_KEY: your secret key
+* Select the 'Deploy' tab at the top.
+* Select 'GitHub' and confirm you wish to deploy using GitHub. You may be asked to enter your GitHub password.
+* Find the 'Connect to GitHub' section and use the search box to locate your repo.
+* Select 'Connect' when found.
+* Optionally choose the main branch under 'Automatic Deploys' and select 'Enable Automatic Deploys' if you wish your deployed site to be automatically redeployed every time you push changes to GitHub.
+* Find the 'Manual Deploy' section, choose 'main' as the branch to deploy and select 'Deploy Branch'.
+* Your site will shortly be deployed and you will be given a link to the deployed site when the process is complete.
 
-## Acknowledgements
+# Acknowledgements

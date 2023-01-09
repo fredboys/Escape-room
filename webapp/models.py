@@ -12,7 +12,7 @@ class Room(models.Model):
     name = models.CharField(max_length=100)
     capacity = models.IntegerField()
     description = models.TextField()
-    image = CloudinaryField('image', default='placeholder')
+    image = CloudinaryField('image')
     price = models.DecimalField(max_digits=5, decimal_places=2)
     duration = models.DecimalField(max_digits=3, decimal_places=0)
 
