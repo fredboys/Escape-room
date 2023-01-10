@@ -114,22 +114,21 @@ This is a booking application for an escape room company. If the consumer would 
 
 ## Technology used
 
-Django - A model-view-template framework used to create Locksmith Booking
-Bootstrap - A CSS framework used for the front end development.
-HTML5 - Provides the content and structure for the website.
-CSS3 - Provides the styling for the website.
-JavaScript - Provides interactive elements of the website
-Python - Provides the functionality of the website.
-Gitpod - Used to create and edit the website.
-GitHub - Used to host the repository.
-GitBash - Terminal used to push changes to the GitHub repository.
-Google Chrome DevTools - Used to test responsiveness and debug.
-Cloudinary - Used to host all static files and images.
-Heroku - Used to deploy the website.
-PEP8 Validation - Used to validate Python code.
-HTML Validation - Used to validate HTML code.
-CSS Validation - Used to validate CSS code.
-JSHint Validation - Used to validate JavaScript code.
+* [Django](https://www.djangoproject.com/) - A model-view-template framework used to create Locksmith Booking
+* [Bootstrap](https://getbootstrap.com/) - A CSS framework used for the front end development.
+* [HTML5](https://en.wikipedia.org/wiki/HTML) - Provides the content and structure for the website.
+* [CSS3](https://en.wikipedia.org/wiki/CSS) - Provides the styling for the website.
+* [JavaScript](https://www.javascript.com/) - Provides interactive elements of the website
+* [Python](https://www.python.org/) - Provides the functionality of the website.
+* [Gitpod](https://www.gitpod.io/) - Used to create and edit the website.
+* [GitHub](https://github.com/) - Used to host the repository.
+* [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to test responsiveness and debug.
+* [Cloudinary](https://cloudinary.com/) - Used to host all static files and images.
+* [Heroku](https://id.heroku.com/login) - Used to deploy the website.
+* [PEP8 Validation](http://ww7.pep8online.com/) - Used to validate Python code.
+* [HTML Validation](https://validator.w3.org/) - Used to validate HTML code.
+* [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
+* [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code.
 
 # Deployment
 
@@ -144,7 +143,7 @@ To test the app locally, the terminal within VScode was used. The steps to run t
 A local database was used for most of the local deployment usage, since it was necessary for the automated tests to run. However, the switch to using the production database could be easily made, in case migrations needed to be performed or otherwise. Furthermore, in the development version, DEBUG was set to False, so error messages would show follow.
 
 ## Production delpoyment 
-SongMates is deployed to Heroku, using an ElephantSQL Postgres database. To duplicate deployment to Heroku, follow these steps:
+Eacape room is deployed to Heroku, using an ElephantSQL Postgres database. To duplicate deployment to Heroku, follow these steps:
 
 * Fork or clone this repository in GitHub.
 * You will need a Cloudinary account to host user images and static files.
