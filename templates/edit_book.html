@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% load crispy_forms_tags %}
 
 {% block content %}
+
       <!-- Shows the form only is user is logged in -->
-      {% if user.is_authenticated %}
+      {% if is_authenticated  %}
         {% if not booked %}
           <div class="container login-text">
             <div class=" booking-text">
@@ -33,4 +33,11 @@
       {% endif %}
       </div>
       </div>
+
+
+      
+    <script>
+      console.log( "{{booking}}" )
+      console.log("hello")
+    </script>
 {% endblock %}

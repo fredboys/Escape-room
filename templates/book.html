@@ -42,7 +42,10 @@
       </div>
       <script>
       $(document).ready(function () {
-          $('#id_time').timepicker({
+
+
+        console.log(document.getElementById("id_time"));
+          $('.timepicker').timepicker({
               timeFormat: 'HH:mm',
               interval: 30,
               minTime: '10',

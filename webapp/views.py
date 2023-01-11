@@ -61,6 +61,7 @@ def account(request):
 
 def update_booking(request, booking_id):
     booking = Booking.objects.get(id=booking_id)
+    is_authenticated = request.user.is_authenticated and booking.user.id == request.user.id
     form = BookingForm(instance=booking)
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
@@ -78,6 +79,7 @@ def update_booking(request, booking_id):
 
     context = {
         'form': form,
+        'is_authenticated': is_authenticated
     }
 
     return render(request, 'edit_book.html', context)
