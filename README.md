@@ -68,35 +68,80 @@ This is a booking application for an escape room company. If the consumer would 
 
 ## Header
 
+![Navigation bar](static/readme/escaperoom-header.jpg)
+
 ## Hero image
+
+![Hero Image](static/readme/escaperoom-hero.jpg)
 
 ## Most popular rooms
 
+![Most popular room section](static/readme/escaperoom-popular.jpg)
+
 ## About us
+
+![About us](static/readme/escaperoom-about.jpg)
 
 ## Footer
 
+![Footer](static/readme/escaperoom-footer.jpg)
+
 ## Rooms
+
+![Rooms](static/readme/escaperoom-rooms.jpg)
 
 ## Make a booking message
 
+![Make a booking message](static/readme/escaperoom-make.jpg)
+
 ## Create an account 
+
+![create an account](static/readme/escaperoom-signup.jpg)
 
 ## Sign in 
 
+![Sign In](static/readme/escaperomm-signin.jpg)
+
 ## Log out
+
+![Logout](static/readme/escaperoom-signout.jpg)
 
 ## Place your booking
 
+![Booking](static/readme/escaperoom-book.jpg)
+
 ## Email confirmations
+
+![Thanks for booking](static/readme/escaperoom-thankyou.jpg)
+
+## Dropdown
+
+![Dropdown](static/readme/escaperoom-dropdown.jpg)
 
 ## Manage bookings
 
+![Account page](static/readme/escaperoom-account.jpg)
+
 ## Update booking
+
+![Update booking](static/readme/escaperoom-updatebook.jpg)
 
 ## Updated message
 
+![Update message](static/readme/escaperoom-message.jpg)
+
+## Cancel confirmation
+
+![Cancel confirmation](static/readme/escaperoom-cancel.jpg)
+
 ## Admin panel
+
+![Admin panel](static/readme/escaperoom-admin.jpg)
+
+![Admin booking](static/readme/escaperoom-adminbooking.jpg)
+
+![Admin rooms](static/readme/escaperoom-adminrooms.jpg)
+
 
 # Testing
 
