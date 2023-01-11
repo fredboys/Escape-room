@@ -9,6 +9,9 @@
         {% if not booked %}
           <div class="container login-text">
             <div class=" booking-text">
+              {% if error %}
+              <h1>{{error}}</h1>
+              {% endif %}
                 <h3 class="login-book-header">Update Your Booking</h3>
                 <form method="post">
                   {{ form | crispy }}
@@ -37,7 +40,7 @@
 
       
     <script>
-      console.log( "{{booking}}" )
+      console.log( "{{error}}" )
       console.log("hello")
     </script>
 {% endblock %}

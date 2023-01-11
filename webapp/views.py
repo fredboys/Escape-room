@@ -26,13 +26,17 @@ class Rooms(generic.ListView):
 def booking(request):
     form = BookingForm()
     booked = False
+    error = None
     if request.method == 'POST':
         form = BookingForm(request.POST)
+        booking = form.save(commit=False)
         if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user = request.user
-            booking.save()
-            booked = True
+            if not booking.is_time_taken():
+                booking.user = request.user
+                booking.save()
+                booked = True
+            else:
+                error = "This slot is not available"
             # email_to = booking.email
             # subject = 'Your booking'
             # message = f'Hi {booking.first_name}, your booking on\
@@ -45,8 +49,9 @@ def booking(request):
     context = {
         'form': form,
         'booked': booked,
+        "error": error
         }
-    
+   
     return render(request, 'book.html', context)
 
 
@@ -62,24 +67,30 @@ def account(request):
 def update_booking(request, booking_id):
     booking = Booking.objects.get(id=booking_id)
     is_authenticated = request.user.is_authenticated and booking.user.id == request.user.id
+    error_message = None
     form = BookingForm(instance=booking)
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
-            form.save()
-            # email_to = booking.email
-            # subject = 'Your booking'
-            # message = f'Hi {booking.first_name}, your booking on\
-            #         {booking.date} has been updated.'
-            # email_from = 'theescaperoomldn@gmail.com'
-            # recipient_list = [email_to, ]
-            # send_mail(subject, message, email_from, recipient_list)
-            messages.success(request, 'Updated successfully!')
-            return redirect('account')
+            if not booking.is_time_taken():
+                error_message = None
+                form.save()
+                # email_to = booking.email
+                # subject = 'Your booking'
+                # message = f'Hi {booking.first_name}, your booking on\
+                #         {booking.date} has been updated.'
+                # email_from = 'theescaperoomldn@gmail.com'
+                # recipient_list = [email_to, ]
+                # send_mail(subject, message, email_from, recipient_list)
+                messages.success(request, 'Updated successfully!')
+                return redirect('account')
+            else:
+                error_message = "That slot is not available"
 
     context = {
         'form': form,
-        'is_authenticated': is_authenticated
+        'is_authenticated': is_authenticated,
+        "error": error_message
     }
 
     return render(request, 'edit_book.html', context)

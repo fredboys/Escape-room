@@ -43,6 +43,18 @@ class Booking(models.Model):
         null=True
         )
 
+    def is_time_taken(self):
+
+        current_user = None
+        if hasattr(self, "user") and self.user is not None:
+            current_user = self.user.id
+
+        return Booking.objects\
+            .filter(date=self.date)\
+            .filter(time=self.time)\
+            .filter(room_name=self.room_name)\
+            .exclude(user_id=current_user)
+
     def save(self, *args, **kwargs):
         if self.date < datetime.date.today():
             raise ValidationError("The date cannot be in the past!")
