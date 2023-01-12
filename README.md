@@ -8,10 +8,12 @@ This is a booking application for an escape room company. If the consumer would 
 
 [Escape room]()
 
+* [Business Goals](#business-goals)
+
 * [User experience](#user-experience)
-    * [Business Goals](#business-goals)
     * [User stories](#user-stories)
     * [Agile Methodology](#agile-methodology)
+    * [Crud Functionality](#crud-functionality)
     * [Database Diagram](#database-diagram)
 
 * [Feautres](#features)
@@ -26,6 +28,7 @@ This is a booking application for an escape room company. If the consumer would 
     * [Sign in](#sign-in)
     * [Log out](#log-out)
     * [Place your booking](#place-your-booking)
+    * [Time slot unavailable message](#time-slot-unavailable-message)
     * [Email confirmations](#email-confirmations)
     * [Manage booking](#manage-booking)
     * [Update booking](#update-booking)
@@ -53,14 +56,70 @@ This is a booking application for an escape room company. If the consumer would 
 
 * [Acknowledgements](#acknowledgements)
 
+# Business goals
+
+The main goal of this project is to give a user the ability to book a specific time and date for which room they would like to play at Escape room.The user should also get a good feeling and know what to expect from each of the games. If the user makes a booking, they should be able to make updates to their booking and also cancel their booking from the user account page.
+
 # User experience
 
+As an unauthorised user:
+* I can navigate around the website easily and efficiently to view all of the required content
+* I can view information about the business such as location and opening times
+* I can view all of the rooms to see if I would like to attend
+* I can view all the details about each individual room
+* I can easily create an account so I can make a booking
+* The process of making an account is simple and easy
 
-## Business goals
+As an authorised user:
+* I can do everything an unauthorised user can
+* I can make booking for a specific time and date for what room I would like to play
+* I get an email confirmation of my booking 
+* I can update my booking to change the date or time
+* I can cancel my booking
+
+As an admin, I can:
+* View all of the bookings that have been placed
+* I can update any of the rooms from the panel
+* I can delete or update any bookings from the panel
 
 ## User stories
+* As a user I can register an account so that I can make bookings
+* As a user I can logout so that my information is protected on my device
+* As a user I can navigate easily across the website so that I can view everything and take actions easily
+* As a user I can receive an email after booking so that I can confirm my booking info
+* As a user I can cancel my booking so that I have flexibility in my decisions
+* As a user I can book a time so that I can attend the escape room
+* As a user I can edit a booking so that I can rearrange for a different time
+* As a user I can view my information so that I can check when my bookings are
+* As a user I can login so that I can see my user information and bookings
+* As a user I can see a google maps api location so that I can plan my journey to the company location
+* As a user I can see a footer so that I can read additional information about the company
+* As a user I can read the about us section so that I can decide if its something I would like to do
+* As a user I can see the rooms they have to offer so that I can choose what room Id like to play
+* As a user I can click the book button on the home page so that I can be taken to the booking page
+
+## Admin stories
+* As a site admin I can add an option that if the user tries to book an appointment without login/sign up, users will be asked to login/sign up.
+* As a site admin I can view all the bookings so that I can plan the day ahead
+* As a site admin I can display a hero image so that the user knows exactly what webpage this is
 
 ## Agile Methodology
+
+An Agile approach to creating this app has been applied. Githubs projects was used to track user stories and implement ideas based on their level of importance for allowing use of the app with no loss of functionality or user experience.Two categories were created indicating their level of importance, those were:
+
+* MUST HAVE
+* SHOULD HAVE
+
+By using AGILE methodology in this project I was able to deliver a site which had all required functionality and was able to give even more extra detail when going through the project.
+
+## CRUD functionality
+
+Escape room handles data with full CRUD Functionality:
+
+Create - User can create an account and booking of their specific requirements.
+Read - Users can view their booking in the manage booking section.
+Update - Users can update their booking by changing anything within the form.
+Delete - Users can delete their booking.
 
 ## Database diagram
 
@@ -109,6 +168,8 @@ This is a booking application for an escape room company. If the consumer would 
 ## Place your booking
 
 ![Booking](static/readme/escaperoom-book.jpg)
+
+## Time slot unavailable message
 
 ## Email confirmations
 
