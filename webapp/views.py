@@ -78,7 +78,8 @@ def update_booking(request, booking_id):
                 email_to = booking.email
                 subject = 'Your booking'
                 message = f'Hi {booking.first_name}, your booking on\
-                    {booking.date} has been updated.'
+                    {booking.date} has been updated.\
+                    We look forward to seeing you!'
                 email_from = 'theescaperoomldn@gmail.com'
                 recipient_list = [email_to, ]
                 send_mail(subject, message, email_from, recipient_list)
@@ -102,7 +103,8 @@ def delete_booking(request, booking_id):
     email_to = booking.email
     subject = 'Your booking'
     message = f'Hi {booking.first_name}, your booking on\
-            {booking.date} has been deleted.'
+            {booking.date} has been deleted.\
+            We hope to see you soon'
     email_from = 'theescaperoomldn@gmail.com'
     recipient_list = [email_to, ]
     send_mail(subject, message, email_from, recipient_list)
