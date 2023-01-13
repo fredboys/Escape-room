@@ -37,14 +37,14 @@ def booking(request):
                 booked = True
             else:
                 error = "This slot is not available"
-            # email_to = booking.email
-            # subject = 'Your booking'
-            # message = f'Hi {booking.first_name}, your booking on\
-            #         {booking.date} has been placed.\
-            #             We look forward to seeing you!'
-            # email_from = 'theescaperoomldn@gmail.com'
-            # recipient_list = [email_to, ]
-            # send_mail(subject, message, email_from, recipient_list)
+            email_to = booking.email
+            subject = 'Your booking'
+            message = f'Hi {booking.first_name}, your booking on\
+                    {booking.date} has been placed.\
+                    We look forward to seeing you!'
+            email_from = 'theescaperoomldn@gmail.com'
+            recipient_list = [email_to, ]
+            send_mail(subject, message, email_from, recipient_list)
 
     context = {
         'form': form,
@@ -75,13 +75,13 @@ def update_booking(request, booking_id):
             if not booking.is_time_taken():
                 error_message = None
                 form.save()
-                # email_to = booking.email
-                # subject = 'Your booking'
-                # message = f'Hi {booking.first_name}, your booking on\
-                #         {booking.date} has been updated.'
-                # email_from = 'theescaperoomldn@gmail.com'
-                # recipient_list = [email_to, ]
-                # send_mail(subject, message, email_from, recipient_list)
+                email_to = booking.email
+                subject = 'Your booking'
+                message = f'Hi {booking.first_name}, your booking on\
+                    {booking.date} has been updated.'
+                email_from = 'theescaperoomldn@gmail.com'
+                recipient_list = [email_to, ]
+                send_mail(subject, message, email_from, recipient_list)
                 messages.success(request, 'Updated successfully!')
                 return redirect('account')
             else:
@@ -99,13 +99,12 @@ def update_booking(request, booking_id):
 def delete_booking(request, booking_id):
     booking = Booking.objects.get(id=booking_id)
     booking.delete()
-    # email_to = booking.email
-    # subject = 'Your booking'
-    # message = f'Hi {booking.first_name}, your booking on\
-    #         {booking.date} has been deleted.'
-    # email_from = 'theescaperoomldn@gmail.com'
-    # recipient_list = [email_to, ]
-    # send_mail(subject, message, email_from, recipient_list)
+    email_to = booking.email
+    subject = 'Your booking'
+    message = f'Hi {booking.first_name}, your booking on\
+            {booking.date} has been deleted.'
+    email_from = 'theescaperoomldn@gmail.com'
+    recipient_list = [email_to, ]
+    send_mail(subject, message, email_from, recipient_list)
     messages.success(request, 'Cancellation successfully!')
     return redirect('account')
-
