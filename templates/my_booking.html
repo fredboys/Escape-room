@@ -5,13 +5,13 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6 mx-auto text-center">
-      {% if messages %}
+      
       {% for message in messages %}
       <div class="alert {{ message.tags }} alert-success fade show success-msg" id="msg" role="alert">
         <strong>{{message}}</strong>
       </div>
       {% endfor %}
-      {% endif %}
+      
       <h1 class="text-center confirmation-header" style="margin: 3%;">My Bookings</h1>
       {% for booking in bookings %}
       {% if forloop.first %}

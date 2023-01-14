@@ -9,7 +9,9 @@ from .forms import BookingForm
 
 
 class Home(generic.TemplateView):
-
+    """
+    View to dispaly the Homepage including Hero image, about us
+    """
     template_name = 'index.html'
 
 
@@ -24,6 +26,11 @@ class Rooms(generic.ListView):
 
 
 def booking(request):
+    """
+    To display the booking form so the user can book a room.
+    They get a message if their enetered booking has already been booked.
+    They get an email for confirmation.
+    """
     form = BookingForm()
     booked = False
     error = None
@@ -57,6 +64,9 @@ def booking(request):
 
 
 def account(request):
+    """
+    View to display the users booking page
+    """
     bookings = Booking.objects.filter(user=request.user)
     context = {
         'bookings': bookings
@@ -66,6 +76,11 @@ def account(request):
 
 
 def update_booking(request, booking_id):
+    """
+    Allows the user to update their booking.
+    Also restricts the users to only update their booking.
+    Also get an email confirmation.
+    """
     booking = Booking.objects.get(id=booking_id)
     is_authenticated = request.user.is_authenticated and booking.user.id == request.user.id
     error_message = None
@@ -100,6 +115,10 @@ def update_booking(request, booking_id):
 
 
 def delete_booking(request, booking_id):
+    """
+    Allows the user to delete their booking 
+    and sends email confirmation.
+    """
     booking = Booking.objects.get(id=booking_id)
     booking.delete()
     # email_to = booking.email

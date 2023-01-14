@@ -44,7 +44,11 @@ class Booking(models.Model):
         )
 
     def is_time_taken(self):
-
+        """
+        This makes sure the user trying to update the booking,
+        is the user that the booking belongs to. 
+        Also when they update it makes sure they cant double book.
+        """
         current_user = None
         if hasattr(self, "user") and self.user is not None:
             current_user = self.user.id
@@ -56,6 +60,9 @@ class Booking(models.Model):
             .exclude(user_id=current_user)
 
     def save(self, *args, **kwargs):
+        """
+        Gives message if they try to book in the past
+        """
         if self.date < datetime.date.today():
             raise ValidationError("The date cannot be in the past!")
         super(Booking, self).save(*args, **kwargs)
