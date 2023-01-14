@@ -324,7 +324,7 @@ footer {
     font-family: 'Oswald', sans-serif;
     font-size: 60px;
     font-weight: 800;
-    color: rgba(141, 110, 151, 0.719);
+    color: rgb(191 149 204 / 72%);
 }
 
 .confirmation {
@@ -348,7 +348,7 @@ footer {
 
   .decoration {
     text-decoration: none;
-    color: rgba(141, 110, 151, 0.719);
+    color: rgb(240 192 255 / 72%);
   }
 
   .success-msg {
@@ -359,3 +359,12 @@ footer {
     font-size: 15px;
   }
   
+  .no-bookings {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .no-booking-btn {
+    margin-bottom: 15px;
+  }

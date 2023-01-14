@@ -44,8 +44,8 @@
       </div>
       {% endif %}
       {% empty %}
-      <p>You have no bookings</p>
-      <a href="{% url 'book' %}" class="btn btn-primary booking-button right">Book A Room</a>
+      <p class="no-bookings">You have no bookings</p>
+      <a href="{% url 'book' %}" class="btn btn-primary booking-button right no-booking-btn">Book A Room</a>
       {% endfor %}
     </div>
   </div>

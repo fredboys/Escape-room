@@ -40,7 +40,8 @@ def booking(request):
             # email_to = booking.email
             # subject = 'Your booking'
             # message = f'Hi {booking.first_name}, your booking on\
-            #         {booking.date} has been placed.\
+            #         {booking.date} for {booking.room_name}\
+            #         at {booking.time} has been placed.\
             #         We look forward to seeing you!'
             # email_from = 'theescaperoomldn@gmail.com'
             # recipient_list = [email_to, ]
@@ -78,7 +79,8 @@ def update_booking(request, booking_id):
                 # email_to = booking.email
                 # subject = 'Your booking'
                 # message = f'Hi {booking.first_name}, your booking on\
-                #     {booking.date} has been updated.\
+                #     {booking.date} for {booking.room_name}\
+                #     at {booking.time} has been updated.\
                 #     We look forward to seeing you!'
                 # email_from = 'theescaperoomldn@gmail.com'
                 # recipient_list = [email_to, ]
@@ -103,7 +105,8 @@ def delete_booking(request, booking_id):
     # email_to = booking.email
     # subject = 'Your booking'
     # message = f'Hi {booking.first_name}, your booking on\
-    #         {booking.date} has been deleted.\
+    #         {booking.date} for {booking.room_name}\
+    #         at {booking.time} has been deleted.\
     #         We hope to see you soon'
     # email_from = 'theescaperoomldn@gmail.com'
     # recipient_list = [email_to, ]
