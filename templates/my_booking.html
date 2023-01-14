@@ -13,7 +13,8 @@
       {% endfor %}
       {% endif %}
       <h1 class="text-center confirmation-header" style="margin: 3%;">My Bookings</h1>
-      
+      {% for booking in bookings %}
+      {% if forloop.first %}
       <div class="card" style="width: 100%; margin-bottom: 10px;">
         <div class="card-body">
           <div class="card-text">
@@ -26,7 +27,7 @@
                   <th scope="col">Room</th>
                   <th scope="col">Actions</th>
                 </tr>
-                {% for booking in bookings %}
+                {% endif %}
                 <tr>
                   <td>{{ booking.date }}</td>
                   <td>{{ booking.time }}</td>
@@ -35,13 +36,17 @@
                   <a href="{% url 'delete' booking.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to cancel? This can not be undone.')">Cancel</a>
                 </td>
                 </tr>
-                {% endfor %}
+                {% if forloop.last %}
               </table>
             </div>
           </div>
         </div>
       </div>
-      
+      {% endif %}
+      {% empty %}
+      <p>You have no bookings</p>
+      <a href="{% url 'book' %}" class="btn btn-primary booking-button right">Book A Room</a>
+      {% endfor %}
     </div>
   </div>
 </div>
