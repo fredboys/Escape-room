@@ -6,19 +6,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery for Google API -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jQuery styling for timepicker -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/acf261aa30.js" crossorigin="anonymous"></script>
+    <!-- CSS stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <title>Escape Room</title>
 </head>
 <body class="d-flex flex-column min-vh-100 gy-0">
     <header>
+      <!-- Navigation -->
         <nav class="navbar navbar-expand-lg fixed">
             <div class="container">
+              <!-- Logo -->
               <a class="navbar-brand" href="{% url 'home' %}">
                 <img class="site_logo" src="{% static 'images/site_logo.png' %}"
                         alt="site logo">
@@ -70,17 +77,18 @@
         
         {% endblock %}
     </main>
+    <!-- Footer -->
       <footer class="text-center text-lg-start text-white footer-color">
         <div class="container p-4 pb-0">
-          <section class="">
+          <section>
             <!--Grid row-->
             <div class="row">
-              <!-- Grid column -->
+              <!-- Map -->
               <div class="col-md-12 col-lg-3 col-xl-3 mx-auto mt-3">
                 <div id="map"></div>
               </div>
     
-              <!-- Grid column -->
+              <!-- Hours -->
               <div class="col-md-12 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 class="text-uppercase fw-bold mb-4">
                   Opening Times
@@ -94,34 +102,28 @@
                   <p class="opening-times">Sunday: 10am - 6pm</p>
               </div>
     
-              <!-- Grid column -->
+              <!-- Line break -->
               <hr class="w-100 clearfix d-md-none" />
     
-              <!-- Grid column -->
+              <!-- Information -->
               <div class="col-md-12 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                 <p><i class="fas fa-home me-3"></i>London, WC2N 0BL</p>
                 <p><i class="fas fa-envelope me-3"></i>info@escape.com</p>
                 <p><i class="fas fa-phone me-3"></i>07912345678</p>
               </div>
-              <!-- Grid column -->
             </div>
-            <!--Grid row-->
           </section>
-          <!-- Section: Links -->
     
           <hr class="my-3">
     
-          <!-- Section: Copyright -->
+          <!-- Copyright -->
           <section class="p-3 pt-0">
             <div class="row d-flex align-items-center">
-              <!-- Grid column -->
               <div class="col-md-7 col-lg-8 text-center text-md-start">
-                <!-- Copyright -->
                 <div class="p-3">
                    <p class="text-white">© 2020 Copyright Escape Room</p>
                 </div>
-                <!-- Copyright -->
               </div>
               <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
                 <!-- Facebook -->
@@ -129,6 +131,7 @@
                    class="btn btn-outline-light btn-floating m-1"
                    class="text-white"
                    role="button"
+                   href="https://www.facebook.com/" target="_blank"
                    ><i class="fab fa-facebook-f"></i
                   ></a>
     
@@ -137,6 +140,7 @@
                    class="btn btn-outline-light btn-floating m-1"
                    class="text-white"
                    role="button"
+                   href="https://twitter.com/" target="_blank"
                    ><i class="fab fa-twitter"></i
                   ></a>
                 <!-- Instagram -->
@@ -144,17 +148,14 @@
                    class="btn btn-outline-light btn-floating m-1"
                    class="text-white"
                    role="button"
+                   href="https://www.instagram.com/" target="_blank"
                    ><i class="fab fa-instagram"></i
                   ></a>
               </div>
-              <!-- Grid column -->
             </div>
           </section>
-          <!-- Section: Copyright -->
         </div>
-        <!-- Grid container -->
       </footer>
-      <!-- Footer -->
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
