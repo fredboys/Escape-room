@@ -1,3 +1,4 @@
+// This function initialize the Google maps API and sets the Cluster to my desired coordinates
 function initMap() {
 
     var map = new google.maps.Map(document.getElementById("map"), {
