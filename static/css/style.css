@@ -7,11 +7,11 @@ body {
     flex-direction: column;
     background-color: black;
 }
-
+/* Header */
 header {
     min-height: 50px;
 }
-
+/* Footer */
 footer {
     min-height: 50px;
 }
@@ -19,7 +19,7 @@ footer {
 main {
     flex: 1;
 }
-
+/* Navigation */
 .nav-link {
     font-family: 'Oswald', sans-serif;
     font-size: 150%;
@@ -51,7 +51,7 @@ main {
     --bs-dropdown-link-color: black;
     --bs-dropdown-link-hover-color: rgba(141, 110, 151, 0.719);
 }
-
+/* Footer */
 .copyright {
     margin-bottom: 0;
 }
@@ -78,8 +78,7 @@ footer {
     padding-top: 12px;
 }
 
-
-
+/* Hero Image */
 .hero-image {
     width: 100%;
 }
@@ -90,7 +89,6 @@ footer {
     color: white;
   }
 
-  /* Centered text */
 .centered {
     position: absolute;
     top: 50%;
@@ -118,6 +116,7 @@ footer {
     background-color: rgba(141, 110, 151, 0.719);
 }
 
+/* Most popular rooms cards */
 .card-image img {
     max-height: 100%;
     max-width: 100%;
@@ -158,6 +157,7 @@ footer {
 
 }
 
+/* About Us */
 .home-page-header {
     font-size: 350%;
     font-family: 'Oswald', sans-serif;
@@ -186,49 +186,7 @@ footer {
     font-size: 18px;
 }
 
-@media (max-width: 1060px) {
-    .hero-text {
-        font-size: 280%;
-    }
-
-    .hero-btn {
-        margin-top: 15px;
-    }
-}
-
-@media (max-width: 991px) {
-    .me-4 {
-        margin-right: 0!important;
-    }
-}
-
-@media (max-width: 760px){
-    .hero-btn {
-        margin-top: 8px;
-    }
-
-    #home-book {
-        display: none;
-    }
-}
-
-@media (max-width: 580px){
-    .hero-text {
-        font-size: 210%;
-    }
-    .home-page-header {
-        font-size: 220%;
-    }
-}
-
-
-@media (max-width: 440px){
-    .site_logo {
-        height: 70px;
-        width: 190px;
-    }
-}
-
+/* Rooms page */
 .rooms {
     color: #fff;
 }
@@ -275,6 +233,7 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Login and logout */
 .login-text {
     color: white;
     width: 300px;
@@ -286,6 +245,7 @@ footer {
     color: rgba(240 192 255 / 72%);
 }
 
+/* Booking form */
 .booking-text {
     color: white;
     text-align: center;
@@ -320,6 +280,7 @@ footer {
     color: white;
 }
 
+/* Thank you message */
 .confirmation-header {
     font-family: 'Oswald', sans-serif;
     font-size: 60px;
@@ -330,6 +291,10 @@ footer {
 .confirmation {
     color: white;
     font-family: 'Ubuntu', sans-serif;
+}
+
+.email-message {
+    font-size: 24px;
 }
 
 .box {
@@ -344,27 +309,76 @@ footer {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-  }
+}
 
-  .decoration {
+.decoration {
     text-decoration: none;
     color: rgb(240 192 255 / 72%);
-  }
-
-  .success-msg {
+}
+/* Messages */
+.success-msg {
     margin-top: 10px;
-  }
+}
 
-  .error-msg {
+.error-msg {
     font-size: 15px;
-  }
-  
-  .no-bookings {
+}  
+
+.no-bookings {
     color: white;
     margin-bottom: 15px;
     font-size: 20px;
-  }
+}
 
-  .no-booking-btn {
+.no-booking-btn {
     margin-bottom: 15px;
-  }
+}
+
+@media (max-width: 1060px) {
+    .hero-text {
+        font-size: 280%;
+    }
+
+    .hero-btn {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .me-4 {
+        margin-right: 0!important;
+    }
+}
+
+@media (max-width: 760px){
+    .hero-btn {
+        margin-top: 8px;
+    }
+
+    #home-book {
+        display: none;
+    }
+}
+
+@media (max-width: 580px){
+    .hero-text {
+        font-size: 210%;
+    }
+    .home-page-header {
+        font-size: 220%;
+    }
+    .email-message {
+        font-size: 16px;
+    }
+    .confirmation-header {
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 440px){
+    .site_logo {
+        height: 70px;
+        width: 190px;
+    }
+}
