@@ -59,7 +59,7 @@ def booking(request):
         'booked': booked,
         "error": error
         }
-   
+
     return render(request, 'book.html', context)
 
 
@@ -116,7 +116,7 @@ def update_booking(request, booking_id):
 
 def delete_booking(request, booking_id):
     """
-    Allows the user to delete their booking 
+    Allows the user to delete their booking
     and sends email confirmation.
     """
     booking = Booking.objects.get(id=booking_id)

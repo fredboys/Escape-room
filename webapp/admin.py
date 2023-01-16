@@ -12,7 +12,8 @@ class RoomAdmin(admin.ModelAdmin):
 class BookingAdmin(admin.ModelAdmin):
 
     list_filter = ('first_name', 'last_name', 'email')
-    list_display = ['date', 'time', 'room_name', 'first_name', 'last_name', 'email']
+    list_display = ['date', 'time', 'room_name', 'first_name', 'last_name',
+                    'email']
     search_fields = ['first_name']
 
     @admin.display(description="Room")

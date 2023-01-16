@@ -46,7 +46,7 @@ class Booking(models.Model):
     def is_time_taken(self):
         """
         This makes sure the user trying to update the booking,
-        is the user that the booking belongs to. 
+        is the user that the booking belongs to.
         Also when they update it makes sure they cant double book.
         """
         current_user = None

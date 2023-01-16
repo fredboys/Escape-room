@@ -4,9 +4,11 @@ This is a booking application for an escape room company. If the consumer would 
 
 ### AM I RESPONSIVE PICTURE
 
-## Live Site
+# Live Site
 
 [Escape room]()
+
+# Content
 
 * [Business Goals](#business-goals)
 
@@ -36,6 +38,8 @@ This is a booking application for an escape room company. If the consumer would 
     * [Admin panel](#admin-panel)
 
 * [Testing](#testing)
+    * [Lighthouse](#lighthouse)
+    * [Manual](#manual)
 
 * [Bugs](#bugs)
     * [Solved](#solved)
@@ -206,6 +210,39 @@ Delete - Users can delete their booking.
 
 # Testing
 
+## Lighthouse
+The application has been tested with Chrome Dev Tools Lighthouse Testing which tests the application for:
+
+* Performance
+* Accessibility
+* Best Practices
+* SEO
+
+### Home Page
+![Home page](static/readme/Homepage-lighthouse.jpg)
+
+### Room Page
+![Room page](static/readme/room-lighthouse.jpg)
+
+### Booking Page
+![Booking](static/readme/book-lighthouse.jpg)
+
+### Account Page
+![Account](static/readme/account-lighthouse.jpg)
+
+## HTML Validator
+
+## CSS Validator
+When running my CSS code through the [CSS Validation service](https://jigsaw.w3.org/css-validator/) I had no bugs.
+
+![CSS Validate](static/readme/css-validate.jpg)
+
+## Pyhton Vaildator
+When running my code through the [CI Pyhton Linter Validation](https://pep8ci.herokuapp.com/) I had no bugs or errors. Ive decided to ignore the 2 lines too long errors
+
+## Manual
+
+
 # Bugs
 
 ## Solved
@@ -231,7 +268,7 @@ Delete - Users can delete their booking.
 * [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to test responsiveness and debug.
 * [Cloudinary](https://cloudinary.com/) - Used to host all static files and images.
 * [Heroku](https://id.heroku.com/login) - Used to deploy the website.
-* [PEP8 Validation](http://ww7.pep8online.com/) - Used to validate Python code.
+* [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate Python code.
 * [HTML Validation](https://validator.w3.org/) - Used to validate HTML code.
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
 * [JSHint Validation](https://jshint.com/) - Used to validate JavaScript code.
