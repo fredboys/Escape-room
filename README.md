@@ -42,6 +42,8 @@ This is a booking application for an escape room company. If the consumer would 
     * [Lighthouse](#lighthouse)
     * [Manual](#manual)
 
+* [Security Features](#security-features)
+
 * [Bugs](#bugs)
     * [Solved](#solved)
     * [Left to solve](#left-to-solve)
@@ -127,6 +129,8 @@ Update - Users can update their booking by changing anything within the form.
 Delete - Users can delete their booking.
 
 ## Database diagram
+
+![Diagram](static/readme/escaperoom-diagram.jpg)
 
 # Features
 
@@ -248,8 +252,8 @@ When running my CSS code through the [CSS Validation service](https://jigsaw.w3.
 
 ![CSS Validate](static/readme/css-validate.jpg)
 
-## Pyhton Vaildator
-When running my code through the [CI Pyhton Linter Validation](https://pep8ci.herokuapp.com/) I had no bugs or errors. Ive decided to ignore the 2 lines too long errors
+## Python Vaildator
+When running my code through the [CI Python Linter Validation](https://pep8ci.herokuapp.com/) I had no bugs or errors. Ive decided to ignore the 2 lines too long errors
 
 ![Python screenshot](static/readme/python-1.jpg)
 
@@ -263,6 +267,17 @@ When running my code through the [CI Pyhton Linter Validation](https://pep8ci.he
 
 ## Manual
 
+# Security Features
+
+## User authentication
+* Django's all auth was used for login and sign up functionality.
+* Django's superuser is used to limit access to admin panel.
+
+## Form Validation
+* Extensive form validation is used on front end as well as backend.
+
+## Database Security
+* All secret keys connecting the database are stored in a env.py file that is never pushed to github. Furthermore, Cross-Site Request Forgery (CSFR) tokens were used on all forms throughout the project.
 
 # Bugs
 
