@@ -2,11 +2,11 @@
 
 This is a booking application for an escape room company. If the consumer would like to have some fun by trying to complete an escape room they can browse the site where they will find all the rooms available to play, be able to create an account and complete a booking of their chosen date and time and a dashboard for the user to manage all of their bookings. The admin can view all bookings to see the upcoming bookings they have for the days ahead with all information provided.
 
-### AM I RESPONSIVE PICTURE
+![Escaperoom responsive](static/readme/escaperoom-responsive.jpg)
 
 # Live Site
 
-[Escape room]()
+[Escape room](https://fred-escape-room-app.herokuapp.com/)
 
 # Content
 
@@ -175,6 +175,8 @@ Delete - Users can delete their booking.
 
 ## Time slot unavailable message
 
+![Slot unavailable](static/readme/escaperoom-available.jpg)
+
 ## Email confirmations
 
 ![Thanks for booking](static/readme/escaperoom-thankyou.jpg)
@@ -198,6 +200,8 @@ Delete - Users can delete their booking.
 ## Cancel confirmation
 
 ![Cancel confirmation](static/readme/escaperoom-cancel.jpg)
+
+![Cancel message](static/readme/escaperoom-cancel-message.jpg)
 
 ## Admin panel
 
@@ -232,6 +236,9 @@ The application has been tested with Chrome Dev Tools Lighthouse Testing which t
 
 ## HTML Validator
 
+When running my HTML code through the [HTML Validation service](https://validator.w3.org/), the only errors I had were from the django code.
+There were no actual HTML erros.
+
 ## CSS Validator
 When running my CSS code through the [CSS Validation service](https://jigsaw.w3.org/css-validator/) I had no bugs.
 
@@ -240,6 +247,15 @@ When running my CSS code through the [CSS Validation service](https://jigsaw.w3.
 ## Pyhton Vaildator
 When running my code through the [CI Pyhton Linter Validation](https://pep8ci.herokuapp.com/) I had no bugs or errors. Ive decided to ignore the 2 lines too long errors
 
+![Python screenshot](static/readme/python-1.jpg)
+
+![Python screenshot](static/readme/python-2.jpg)
+
+![Python screenshot](static/readme/python-3.jpg)
+
+![Python screenshot](static/readme/python-4.jpg)
+
+![Python screenshot](static/readme/python-5.jpg)
 ## Manual
 
 

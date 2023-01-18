@@ -381,4 +381,7 @@ footer {
         height: 70px;
         width: 190px;
     }
+    .confirmation-header {
+        font-size: 40px;
+    }
 }
