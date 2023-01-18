@@ -36,6 +36,7 @@ This is a booking application for an escape room company. If the consumer would 
     * [Update booking](#update-booking)
     * [Updated message](#updated-message)
     * [Admin panel](#admin-panel)
+    * [404 Page](#404-page)
 
 * [Testing](#testing)
     * [Lighthouse](#lighthouse)
@@ -211,6 +212,9 @@ Delete - Users can delete their booking.
 
 ![Admin rooms](static/readme/escaperoom-adminrooms.jpg)
 
+## 404 Page
+
+![404 page](static/readme/escaperoom-404.jpg)
 
 # Testing
 
