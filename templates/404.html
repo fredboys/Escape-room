@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mt-2 mx-auto text-center">
+                <div class="darkg-bg py-5 error-page">
+                    <h1 class="error-page">Error 404</h1>
+                    <p>Oops! It looks like you've taken a wrong turn. Not to worry, click <a href="{% url 'home' %}">here</a> to go back ;)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

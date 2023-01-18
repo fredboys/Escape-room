@@ -256,6 +256,7 @@ When running my code through the [CI Pyhton Linter Validation](https://pep8ci.he
 ![Python screenshot](static/readme/python-4.jpg)
 
 ![Python screenshot](static/readme/python-5.jpg)
+
 ## Manual
 
 
@@ -263,13 +264,29 @@ When running my code through the [CI Pyhton Linter Validation](https://pep8ci.he
 
 ## Solved
 
+* I had some contrasting issues which I fixed by used devtools and using their recommended colours
+
+![Contrast](static/readme/readme-contrast1.jpg)
+
 ## Left to solve
+
+There are no more bugs to solve as of 18/01/2023
 
 # Credits
 
 ## Code 
 
+* I used [this website](https://timepicker.co/?fbclid=IwAR2OiqEuDfKTM7438Gk72GFZjP0l4ze-A7aRiBSfE4FAJeH0Q8jIjk_-EcY) to make the datetime picker.
+* I used [this website](https://opensource.com/article/22/12/django-send-emails-smtp) to send emails to the users.
+* I used [this website](https://developers.google.com/maps/documentation/embed/get-api-key) to help me create the google maps API.
+* I used [this website](https://docs.djangoproject.com/en/3.2/ref/templates/builtins/#for-empty) to help me with for loops on my_booking.html
+
 ## Images
+
+I used the following website to get my free stock images from -
+
+* [Pexels](https://www.pexels.com/)
+* [Unsplash](https://unsplash.com/)
 
 ## Technology used
 
@@ -282,6 +299,7 @@ When running my code through the [CI Pyhton Linter Validation](https://pep8ci.he
 * [Gitpod](https://www.gitpod.io/) - Used to create and edit the website.
 * [GitHub](https://github.com/) - Used to host the repository.
 * [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) - Used to test responsiveness and debug.
+* [Am I Responsive](https://ui.dev/amiresponsive) - Used to generate mockup of my webpage.
 * [Cloudinary](https://cloudinary.com/) - Used to host all static files and images.
 * [Heroku](https://id.heroku.com/login) - Used to deploy the website.
 * [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate Python code.
@@ -339,3 +357,5 @@ Eacape room is deployed to Heroku, using an ElephantSQL Postgres database. To du
 * Your site will shortly be deployed and you will be given a link to the deployed site when the process is complete.
 
 # Acknowledgements
+
+A huge thanks to my mentor Malia for going through my project and spotting the errors and bugs for me to fix.

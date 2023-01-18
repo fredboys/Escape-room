@@ -21,3 +21,5 @@ urlpatterns = [
     path('', include('webapp.urls'), name='webapp_urls'),
     path('accounts/', include('allauth.urls'))
 ]
+
+handler404 = 'webapp.views.error_404_view'

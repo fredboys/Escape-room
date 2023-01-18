@@ -132,3 +132,11 @@ def delete_booking(request, booking_id):
     send_mail(subject, message, email_from, recipient_list)
     messages.success(request, 'Cancellation successfully!')
     return redirect('account')
+
+
+def error_404_view(request, exception):
+    """
+    Displays 404.html path
+    """
+
+    return render(request, '404.html')
