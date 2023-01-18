@@ -125,7 +125,7 @@ def delete_booking(request, booking_id):
     subject = 'Your booking'
     message = f'Hi {booking.first_name}, your booking on\
             {booking.date} for {booking.room_name}\
-            at {booking.time} has been deleted.\
+            at {booking.time} has been cancelled.\
             We hope to see you soon'
     email_from = 'theescaperoomldn@gmail.com'
     recipient_list = [email_to, ]
