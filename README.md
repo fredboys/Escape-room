@@ -135,88 +135,123 @@ Delete - Users can delete their booking.
 # Features
 
 ## Header
+The header is the main navigation of the site. It allows the user to access all parts of the webpage with just a single click.
+It has a nice contrasting colour between the background colour and the text colour. When the user hovers over the text, there will be a slight
+change in colour which will notify the user that it is a clickable link. The navbar has been split into two, on the left is the links to 
+access the contents of the webpage and on the right is all the user information pages.
 
 ![Navigation bar](static/readme/escaperoom-header.jpg)
 
 ## Hero image
+The hero image is very big and prominent. It makes it obvious to the user what this webpage is about. The text in the center welcomes the user and 
+it also has a button to book, which gives the user direct access to the booking page.
 
 ![Hero Image](static/readme/escaperoom-hero.jpg)
 
 ## Most popular rooms
+In this section, it promotes the 3 most popular rooms with a small description of what the rooms are. From here the user can go to the booking page through the "book" link. 
 
 ![Most popular room section](static/readme/escaperoom-popular.jpg)
 
 ## About us
+At the bottom of the home page the user can find an about us section. This is where the user can understand a bit more about who runs the comapny and more on what it is.
 
 ![About us](static/readme/escaperoom-about.jpg)
 
 ## Footer
+The footer hold all the important information that the user will want to know about the company. This includes a Google Maps API of the location of the business so 
+the user can make a plan of how they are going to get to the location. It also tells the user the opening and closing times of the comapany so they can decided what time they would like to play. It also shows the contact information if the user needed to contact the company. 
 
 ![Footer](static/readme/escaperoom-footer.jpg)
 
 ## Rooms
+This section provides the user with the information to all of the rooms. From here the user can read up about all of the rooms and see the prices, capacity and duration to make a decision on what room they want to play. Each room has a book button which will take the user straight to the booking page.
 
 ![Rooms](static/readme/escaperoom-rooms.jpg)
 
 ## Make a booking message
+If the user isnt logged in they will be asked to either log in or create an account. They will be promted with two buttons which will take them to the allauth form they require to procede with making a booking.
 
 ![Make a booking message](static/readme/escaperoom-make.jpg)
 
 ## Create an account 
+Here the user in prompted with 4 simple inputs to create an account. If they already have an account there is a link that will take them to the "sign in" page instead. Once the user has entered the information they can submit and they will have created an account ready to make a booking.
 
 ![create an account](static/readme/escaperoom-signup.jpg)
 
-## Sign in 
+## Sign in
+Here the user in prompted with 2 simple inputs to sign in with. If they dont have an account there is a link that will take them to the "sign up" page instead. Once the user has entered the information they can sign in and they will be ready to make a booking.
 
 ![Sign In](static/readme/escaperomm-signin.jpg)
 
 ## Log out
+If the user wishes to log out they will be redirected to this page where they will be asked to confirm that they want to log out.
 
 ![Logout](static/readme/escaperoom-signout.jpg)
 
 ## Place your booking
+Once the user is ready to make a booking they will be able to fill out this form. Here they will be asked for their first name, last name, email, phone number, date they would like to play, time they would like to play and which room they would like to play. The date will have a datepicker dropdown which makes it easy for the user to select their chosen date. The time will have a dropdwon for the times between 10am and 6pm to make it clear to the user that these are the times of opening. Once the user is happy they can submit their booking request.
 
 ![Booking](static/readme/escaperoom-book.jpg)
 
 ## Time slot unavailable message
+If the users desired booking as already been placed by someones else, this message will appear at the the top of the form. The user can then select another date or time of their choice.
 
 ![Slot unavailable](static/readme/escaperoom-available.jpg)
 
 ## Email confirmations
+When a successful booking has been placed they will be redirected to this page. They will get a thank you message and a confirmation email of the details they have choosen. The user can then access their booking from this page by clicking on the link.
 
 ![Thanks for booking](static/readme/escaperoom-thankyou.jpg)
 
 ## Dropdown
+Once logged in the user can see they are logged in because their username will appear in the navbar. From here there will be a dropdown where the user can access their bookings from and where they can also log out from.
 
 ![Dropdown](static/readme/escaperoom-dropdown.jpg)
 
 ## Manage bookings
+If the user has a booking, they can view, update or delete their booking from this section. The details of their booking will be shown here alongside with two buttons. One to delete and one to update.
 
 ![Account page](static/readme/escaperoom-account.jpg)
 
+If they do not have any booking they will be shown this screen. Here there is a button they can click to take them to the booking form to make one if they want to.
+
+![no booking](static/readme/escaperoom-nobooking.jpg)
+
 ## Update booking
+If the user wants to update their booking they will be taken back to the form. All of their previous information will already be here in place. The user can then update anything they need to. They will get the prompt if the slot is already taken again. Once they are happy with their new details they can submit and the changes will be shown in the manage bookings area.
 
 ![Update booking](static/readme/escaperoom-updatebook.jpg)
 
 ## Updated message
+Once they submit the update. This message will appear to confirm their changes and they will also get a confirmation email with their new booking.
 
 ![Update message](static/readme/escaperoom-message.jpg)
 
 ## Cancel confirmation
+If the user want to cancel their booking they can. Once they press the red cancel button they will be prompted by this alert. This is where they can confirm that they want to delete their booking and give double confirmation.
 
 ![Cancel confirmation](static/readme/escaperoom-cancel.jpg)
+
+Once they confirm they will be shown this message and the changes will reflect in the manage bookings area.
 
 ![Cancel message](static/readme/escaperoom-cancel-message.jpg)
 
 ## Admin panel
+The admin can access this panel by logging in with the superuser details. They will be able to get an overview of all of the information about the website. Including the information of the users, the rooms and the bookings.
 
 ![Admin panel](static/readme/escaperoom-admin.jpg)
 
+Here the admins can see the bookings that have been placed. They will see all of the important information about the booking such as time, date, name of the booker, room name and email. The admin has an option to delete bookings from the system from this panel.
+
 ![Admin booking](static/readme/escaperoom-adminbooking.jpg)
+
+Here the admin can alter any of the information about the rooms including the name, price, duration, capacity, description or image. They can also add new rooms if they wish to expand of even remove rooms.
 
 ![Admin rooms](static/readme/escaperoom-adminrooms.jpg)
 
 ## 404 Page
+This is the page the users will be shown if they have an incorrect url for whatever reason. they will have a link they can press to take them back to the home page.
 
 ![404 page](static/readme/escaperoom-404.jpg)
 
