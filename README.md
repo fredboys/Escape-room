@@ -17,6 +17,7 @@ This is a booking application for an escape room company. If the consumer would 
     * [Agile Methodology](#agile-methodology)
     * [Crud Functionality](#crud-functionality)
     * [Database Diagram](#database-diagram)
+    * [Wireframes](#wireframes)
 
 * [Feautres](#features)
     * [Header](#header)
@@ -131,6 +132,26 @@ Delete - Users can delete their booking.
 ## Database diagram
 
 ![Diagram](static/readme/escaperoom-diagram.jpg)
+
+## Wireframes
+
+I built these wireframes with balsamiq to help me get a design ready for the website. The final website may look different form the inital wireframes.
+
+This is the wireframe for the homepage. It has a base navbar and footer. Includes a hero image and welcome text. Then a little picture montage of the rooms. Then an about us section
+
+![Home page wireframe](static/readme/escaperoom-homewire.jpg)
+
+The room page will shwcase the rooms with a nice design.
+
+![Room page wireframe](static/readme/escaperoom-rommwire.jpg)
+
+The booking form will be simple and clean with just the key information required.
+
+![Booking page wireframe](static/readme/escaperoom-bookwire.jpg)
+
+Te manage booking section will have an update and cancel booking button. Making the booking managable for the users.
+
+![Manage booking wireframe](static/readme/escaperoom-bookingwire.jpg)
 
 # Features
 
