@@ -300,7 +300,104 @@ When running my code through the [CI Python Linter Validation](https://pep8ci.he
 
 ![Python screenshot](static/readme/python-5.jpg)
 
+
+## JSHint Validator
+When running my JavaScript through [JSHint validator](https://jshint.com/) I had no bugs or erros.
+
+![Javascript screenshot](static/readme/escaperoom-js.jpg)
+
 ## Manual
+
+Testing has been done manually with the google chrome dev tools to make sure the website is fully responsive. I have checked all pages at all key breakpoints to make sure the layout remains user friendly and nothing clashes.
+
+I manually tested all buttons, forms and links to make sure the correct action took place. Here are tables to show the testing.
+
+### Nav bar
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| logo   | Takes you to the home page     | PASS    | 
+| Home link     |   Takes you to the home page     | PASS      |
+| Rooms link   | Takes you to the rooms page     | PASS    | 
+| Book link     |   Takes you to the booking page or sign in/sign up page     | PASS      |
+| login/sign up link   | Takes you to the sign in page     | PASS    | 
+
+### Footer
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| google maps   | allows you to see the location     | PASS    | 
+| Facebook link     |   Takes you to the facebook page     | PASS      |
+| Instagram link   | Takes you to the instagram page     | PASS    | 
+| Twitter link     |   Takes you to the twitter page     | PASS      |
+
+### Home page
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| hero button   | Takes you to the booking page or sign in/sign up page     | PASS    | 
+| popular room link     |   Takes you to the booking page or sign in/sign up page     | PASS      |
+
+### Rooms page
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| rooms book button   | Takes you to the booking page or sign in/sign up page     | PASS    |
+
+### Create an account or Sign in to make a booking page
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| sign in button   | Takes you to the  sign in   | PASS    | 
+| sign up button     |   Takes you to the sign up page     | PASS      |
+
+### Create an account form page
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| sign in link   | redirects to login form   | PASS    | 
+| All inputs   | make sure they're all valid   | PASS    | 
+| sign up button     |   Creates your account and redirects to home page     | PASS      |
+
+### Sign in form page
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| Sign up link   | redirects to create an account form   | PASS    | 
+| All inputs   | make sure they're all valid   | PASS    | 
+| sign in button     |   Sign in to your account and redirects to home page     | PASS      |
+
+### Nav bar dropdown once logged in
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| Dropdown   | brings a dropdown for two options   | PASS    | 
+| booking link   | redirects to manage booking page   | PASS    | 
+| logout link     |   takes you to confirm logout     | PASS      |
+
+### Booking page
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| All inputs   | make sure all inputs are valid before submitting   | PASS    | 
+| datepicker   | datepicker should appear   | PASS    |
+| timepicker   | timepicker should appear   | PASS    | 
+| submit button   | submit form and a confirmation message appears on new page   | PASS    | 
+
+### Manage booking page
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| Update button   | takes you to the booking form   | PASS    | 
+| Cancel button   | bbrings up an alert to confirm cancel   | PASS    |
+
+### Manage booking bo booking page
+
+| What is being tested | Whats supposed to happen | Pass/Fail |
+| --- | --- | --- |
+| Book button   | takes you to the booking form   | PASS    | 
+
+
 
 # Security Features
 
@@ -318,7 +415,7 @@ When running my code through the [CI Python Linter Validation](https://pep8ci.he
 
 ## Solved
 
-* I had some contrasting issues which I fixed by used devtools and using their recommended colours
+* I had some contrasting issues which I fixed by using devtools and using their recommended colours
 
 ![Contrast](static/readme/readme-contrast1.jpg)
 
@@ -412,4 +509,4 @@ Eacape room is deployed to Heroku, using an ElephantSQL Postgres database. To du
 
 # Acknowledgements
 
-A huge thanks to my mentor Malia for going through my project and spotting the errors and bugs for me to fix.
+A huge thanks to my mentor Malia for going through my project and helping me with any issues I had to deal with.
