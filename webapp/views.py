@@ -83,27 +83,30 @@ def update_booking(request, booking_id):
     """
     booking = Booking.objects.get(id=booking_id)
     is_authenticated = request.user.is_authenticated and booking.user.id == request.user.id
-    error_message = None
-    form = BookingForm(instance=booking)
-    if request.method == 'POST':
-        form = BookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            if not booking.is_time_taken():
-                error_message = None
-                form.save()
-                email_to = booking.email
-                subject = 'Your booking'
-                message = f'Hi {booking.first_name}, your booking on\
-                    {booking.date} for {booking.room_name}\
-                    at {booking.time} has been updated.\
-                    We look forward to seeing you!'
-                email_from = 'theescaperoomldn@gmail.com'
-                recipient_list = [email_to, ]
-                send_mail(subject, message, email_from, recipient_list)
-                messages.success(request, 'Updated successfully!')
-                return redirect('home')
-            else:
-                error_message = "That slot is not available"
+    if is_authenticated:
+        error_message = None
+        form = BookingForm(instance=booking)
+        if request.method == 'POST':
+            form = BookingForm(request.POST, instance=booking)
+            if form.is_valid():
+                if not booking.is_time_taken():
+                    error_message = None
+                    form.save()
+                    email_to = booking.email
+                    subject = 'Your booking'
+                    message = f'Hi {booking.first_name}, your booking on\
+                        {booking.date} for {booking.room_name}\
+                        at {booking.time} has been updated.\
+                        We look forward to seeing you!'
+                    email_from = 'theescaperoomldn@gmail.com'
+                    recipient_list = [email_to, ]
+                    send_mail(subject, message, email_from, recipient_list)
+                    messages.success(request, 'Updated successfully!')
+                    return redirect('home')
+                else:
+                    error_message = "That slot is not available"
+    else:
+        return render(request, '500.html')
 
     context = {
         'form': form,
