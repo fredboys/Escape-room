@@ -135,8 +135,8 @@ def delete_booking(request, booking_id):
         messages.success(request, 'Cancellation successfully!')
         return redirect('account')
     else:
-        messages.success(request, 'You dont have permission to deleete this booking!')
-        return redirect('account')
+        messages.success(request, 'You dont have permission to delete this booking!')
+        return render('home')
 
 
 def error_404_view(request, exception):

@@ -377,6 +377,9 @@ footer {
     .confirmation-header {
         font-size: 50px;
     }
+    .manage-btn {
+        margin-bottom: 5px;
+    }
 }
 
 

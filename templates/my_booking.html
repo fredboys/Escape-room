@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 mx-auto text-center">
+    <div class="col-md-8 col-sm-12 mx-auto text-center">
       
       {% for message in messages %}
       <div class="alert {{ message.tags }} alert-success fade show success-msg" id="msg" role="alert">
@@ -32,8 +32,8 @@
                   <td>{{ booking.date }}</td>
                   <td>{{ booking.time }}</td>
                   <td>{{ booking.room_name }}</td>
-                  <td><a href="{% url 'update' booking.id  %}" class="btn btn-primary">Update</a>
-                  <a href="{% url 'delete' booking.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to cancel? This can not be undone.')">Cancel</a>
+                  <td><a href="{% url 'update' booking.id  %}" class="btn btn-primary manage-btn">Update</a>
+                  <a href="{% url 'delete' booking.id %}" class="btn btn-danger manage-btn" onclick="return confirm('Are you sure you want to cancel? This can not be undone.')">Cancel</a>
                 </td>
                 </tr>
                 {% if forloop.last %}
