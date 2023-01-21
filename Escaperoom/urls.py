@@ -23,3 +23,5 @@ urlpatterns = [
 ]
 
 handler404 = 'webapp.views.error_404_view'
+
+handler500 = 'webapp.views.handler500'

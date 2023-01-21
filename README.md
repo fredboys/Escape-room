@@ -120,6 +120,12 @@ An Agile approach to creating this app has been applied. Githubs projects was us
 
 By using AGILE methodology in this project I was able to deliver a site which had all required functionality and was able to give even more extra detail when going through the project.
 
+I used GitHub projects board to create the user stories and keep track of my tasks. Here is the link to my board - [Project board](https://github.com/users/fredboys/projects/8/views/1)
+
+Here is also a screenshot overview
+
+![project board](static/readme/escaperoom-project.jpg)
+
 ## CRUD functionality
 
 Escape room handles data with full CRUD Functionality:
@@ -136,6 +142,8 @@ Delete - Users can delete their booking.
 ## Wireframes
 
 I built these wireframes with balsamiq to help me get a design ready for the website. The final website may look different form the inital wireframes.
+
+It's assumed that on smaller devices such s tablets and mobile phones,multiple column presentations such as room images on the home page, room imagery and details on the rooms page, and the columns of the footer would stack to one column. Also the navbar on smaller screens will come to one and provide a dropdown.
 
 This is the wireframe for the homepage. It has a base navbar and footer. Includes a hero image and welcome text. Then a little picture montage of the rooms. Then an about us section
 
@@ -276,6 +284,12 @@ This is the page the users will be shown if they have an incorrect url for whate
 
 ![404 page](static/readme/escaperoom-404.jpg)
 
+## Future Features
+
+* Add newsletter to send discounts and room updates
+* Have times solved for each room that is updated by each visit
+* Automate Top times for each room
+
 # Testing
 
 ## Lighthouse
@@ -311,11 +325,19 @@ When running my CSS code through the [CSS Validation service](https://jigsaw.w3.
 ## Python Vaildator
 When running my code through the [CI Python Linter Validation](https://pep8ci.herokuapp.com/) I had no bugs or errors. Ive decided to ignore the 2 lines too long errors
 
+This is in my webapp - admin.py
+
 ![Python screenshot](static/readme/python-1.jpg)
+
+This is in my webapp - forms.py
 
 ![Python screenshot](static/readme/python-2.jpg)
 
+This is in my webapp - urls.py
+
 ![Python screenshot](static/readme/python-3.jpg)
+
+This is in my webapp - views.py
 
 ![Python screenshot](static/readme/python-4.jpg)
 
