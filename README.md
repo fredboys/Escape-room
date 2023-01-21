@@ -444,6 +444,10 @@ I manually tested all buttons, forms and links to make sure the correct action t
 
 # Security Features
 
+* Users cannot deduce the delete url and delete others bookings, they get a custom 500 error page if they do this when not logged in and a warning message if they are authenticated
+
+* Users cannot deduce the update ulr and update others’ bookings, they get a custom 500 error page if they attempt to do this.
+
 ## User authentication
 * Django's all auth was used for login and sign up functionality.
 * Django's superuser is used to limit access to admin panel.
@@ -461,6 +465,14 @@ I manually tested all buttons, forms and links to make sure the correct action t
 * I had some contrasting issues which I fixed by using devtools and using their recommended colours
 
 ![Contrast](static/readme/readme-contrast1.jpg)
+
+* I had two main bugs in my project. These two bugs would allow hackers to delete and update someone else's bookings. I first had to check if the user that was trying to update or cancel the booking, owned that booking. I done that through this code - 
+
+![Bug](static/readme/escaperoom-bug.jpg)
+
+* Then I had to write an if statement to allow the authenticated user to continue their action. If not they get a custom 500 error page.
+
+![500](static/readme/escaperoom-bug500.jpg)
 
 ## Left to solve
 
