@@ -218,12 +218,12 @@ footer {
     font-family: 'Ubuntu', sans-serif;
 }
 
-#book-button {
+.book-button {
     background-color: rgba(141, 110, 151, 0.719);
     border-color: rgba(141, 110, 151, 0.719);
 }
 
-#book-button:hover {
+.book-button:hover {
     background-color: white;
     color: black;
     border-color: white;

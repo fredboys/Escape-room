@@ -27,9 +27,8 @@
                 <p>£{{ room.price }} - {{ room.capacity }} capacity - {{ room.duration }} minutes</p>
 
                 <a href="{% url 'book' %}"
-                class="btn btn-secondary btn-sm btn-card btn-margin"
-                id="book-button">Book
-                Now!</a>
+                class="btn btn-secondary btn-sm btn-card btn-margin book-button">
+                Book Now!</a>
             </div>
             <div class="col-md-6 pro"><img src="{{ room.image.url}}" alt="" class="img-resize"></div>
         </div>
@@ -45,9 +44,8 @@
                 <p>£{{ room.price }} - {{ room.capacity }} capacity - {{ room.duration }} minutes</p>
 
                 <a href="{% url 'book' %}"
-                    class="btn btn-secondary btn-sm btn-card"
-                    id="book-button">Book
-                    Now!</a>
+                    class="btn btn-secondary btn-sm btn-card book-button">
+                    Book Now!</a>
             </div>
         </div>
         {% endifequal %}
@@ -57,8 +55,9 @@
 
         {% endif %}
     </div>
-        {% endfor %}
 </section>
+        {% endfor %}
+
 
     
 {% endblock %}

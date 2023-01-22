@@ -314,8 +314,15 @@ The application has been tested with Chrome Dev Tools Lighthouse Testing which t
 
 ## HTML Validator
 
-When running my HTML code through the [HTML Validation service](https://validator.w3.org/), the only errors I had were from the django code.
-There were no actual HTML erros.
+When running my HTML code through the [HTML Validation service](https://validator.w3.org/), I encountered a few minor errors that have now all be corrected.
+
+This is the base/index.html page -
+
+![HTML error index page](static/readme/escaperoom-html1.jpg)
+
+This is the rooms page -
+
+![HTML room page](static/readme/escaperoom-html2.jpg)
 
 ## CSS Validator
 When running my CSS code through the [CSS Validation service](https://jigsaw.w3.org/css-validator/) I had no bugs.
