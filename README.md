@@ -105,6 +105,9 @@ As an admin, I can:
 * As a user I can read the about us section so that I can decide if its something I would like to do
 * As a user I can see the rooms they have to offer so that I can choose what room Id like to play
 * As a user I can click the book button on the home page so that I can be taken to the booking page
+* As a user I want the site to be secure so no one but me can update a booking I created.
+* As a user, I want the site to be secure so noone but me can delete a booking I created.
+
 
 ## Admin stories
 * As a site admin I can add an option that if the user tries to book an appointment without login/sign up, users will be asked to login/sign up.
@@ -130,10 +133,13 @@ Here is also a screenshot overview
 
 Escape room handles data with full CRUD Functionality:
 
-Create - User can create an account and booking of their specific requirements.
-Read - Users can view their booking in the manage booking section.
-Update - Users can update their booking by changing anything within the form.
-Delete - Users can delete their booking.
+**Create** - User can create an account and booking of their specific requirements.
+
+**Read** - Users can view their booking in the manage booking section.
+
+**Update** - Users can update their booking by changing anything within the form.
+
+**Delete** - Users can delete their booking.
 
 ## Database diagram
 
@@ -143,13 +149,13 @@ Delete - Users can delete their booking.
 
 I built these wireframes with balsamiq to help me get a design ready for the website. The final website may look different form the inital wireframes.
 
-It's assumed that on smaller devices such s tablets and mobile phones,multiple column presentations such as room images on the home page, room imagery and details on the rooms page, and the columns of the footer would stack to one column. Also the navbar on smaller screens will come to one and provide a dropdown.
+It's assumed that on smaller devices such as tablets and mobile phones, multiple column presentations such as room images on the home page, room imagery and details on the rooms page, and the columns of the footer would stack to one column. Also the navbar on smaller screens will come to one and provide a dropdown.
 
 This is the wireframe for the homepage. It has a base navbar and footer. Includes a hero image and welcome text. Then a little picture montage of the rooms. Then an about us section
 
 ![Home page wireframe](static/readme/escaperoom-homewire.jpg)
 
-The room page will shwcase the rooms with a nice design.
+The room page will showcase the rooms with a nice design.
 
 ![Room page wireframe](static/readme/escaperoom-rommwire.jpg)
 
@@ -157,7 +163,7 @@ The booking form will be simple and clean with just the key information required
 
 ![Booking page wireframe](static/readme/escaperoom-bookwire.jpg)
 
-Te manage booking section will have an update and cancel booking button. Making the booking managable for the users.
+The manage booking section will have an update and cancel booking button. Making the booking managable for the users.
 
 ![Manage booking wireframe](static/readme/escaperoom-bookingwire.jpg)
 
@@ -289,6 +295,7 @@ This is the page the users will be shown if they have an incorrect url for whate
 * Add newsletter to send discounts and room updates
 * Have times solved for each room that is updated by each visit
 * Automate Top times for each room
+* Make emails easier to read
 
 # Testing
 
@@ -481,6 +488,10 @@ I manually tested all buttons, forms and links to make sure the correct action t
 
 ![500](static/readme/escaperoom-bug500.jpg)
 
+* I had an issue when refresing on thank you booking page, it sends user another email. I had my email in the wrong section of my code and was a simple fix with a quick move. 
+
+![Email code](static/readme/escaperoom-bugemail.jpg)
+
 ## Left to solve
 
 There are no more bugs to solve as of 18/01/2023
@@ -525,17 +536,37 @@ I used the following website to get my free stock images from -
 ## Local deployment
 To test the app locally, the terminal within VScode was used. The steps to run this:
 
-* In your project workspace folder, open a terminal
-* Run the command: python3 manage.py runserver
-* Hit the 'open browser' button or visit http://localhost:8000/ in the browser.
+* Start from installing the chrome extension then clicking the green gitpod button in YOUR forked repository
+* Include the pip3 install -r requirements.txt
+* Creating env.py
+    * EMAIL_HOST_PASSWORD=<YOUR_VALUE>
+    * DEFAULT_FROM_EMAIL=<YOUR_VALUE>
+    * EMAIL_USERNAME=<YOUR_VALUE>
+    * SECRET_KEY=<YOUR_VALUE>
+    * CLOUDINARY_URL=<YOUR_VALUE>
+    * DEV=TRUE
+* Migrate so the database starts up python3 manage.py migrate
+* Create a super user so you can make the rooms in the admin and other things  python3 manage.py createsuperuser
+* Start the server python3 manage.py runserver
 * Use the website as usual.
 
-A local database was used for most of the local deployment usage, since it was necessary for the automated tests to run. However, the switch to using the production database could be easily made, in case migrations needed to be performed or otherwise. Furthermore, in the development version, DEBUG was set to False, so error messages would show follow.
+A local database was used for most of the local deployment usage, since it was necessary for the automated tests to run. However, the switch to using the production database could be easily made, in case migrations needed to be performed or otherwise. Furthermore, in the development version, DEBUG was set to False, so error messages would show.
+
+## Create a Fork
+
+* On GitHub.com, navigate to the repository.
+* In the top-right corner of the page, click Fork.
+* Select an owner for the forked repository.
+* By default, forks are named the same as their upstream repositories. You can change the name of the fork to distinguish it further.
+* Optionally, add a description of your fork.
+* Choose whether to copy only the default branch or all branches to the new fork. For many forking scenarios, such as contributing to open-source projects, you only need to copy the default branch. By default, only the default branch is copied.
+* Click Create fork.
 
 ## Production delpoyment 
-Eacape room is deployed to Heroku, using an ElephantSQL Postgres database. To duplicate deployment to Heroku, follow these steps:
+Escape room is deployed to Heroku, using an ElephantSQL Postgres database. To duplicate deployment to Heroku, follow these steps:
 
-* Fork or clone this repository in GitHub.
+After you have forked the project for your own, continue these steps as follows -
+
 * You will need a Cloudinary account to host user images and static files.
 * Login to Cloudinary.
 * Select the 'dashboard' option.

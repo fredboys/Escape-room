@@ -44,9 +44,11 @@ def booking(request):
                 booked = True
                 email_to = booking.email
                 subject = 'Your booking'
-                message = f'Hi {booking.first_name}, your booking on\
-                        {booking.date} for {booking.room_name}\
-                        at {booking.time} has been placed.\
+                message = f'Hi {booking.first_name},\n your booking has \
+                        been placed:\n\
+                        \tDATE:{booking.date}\n \
+                        \tROOM:{booking.room_name}\n \
+                        \tTIME{booking.time}\n \
                         We look forward to seeing you!'
                 email_from = 'theescaperoomldn@gmail.com'
                 recipient_list = [email_to, ]
@@ -94,9 +96,11 @@ def update_booking(request, booking_id):
                     form.save()
                     email_to = booking.email
                     subject = 'Your booking'
-                    message = f'Hi {booking.first_name}, your booking on\
-                        {booking.date} for {booking.room_name}\
-                        at {booking.time} has been updated.\
+                    message = f'Hi {booking.first_name},\n your booking has \
+                        been updated:\n\
+                        \tDATE:{booking.date}\n \
+                        \tROOM:{booking.room_name}\n \
+                        \tTIME{booking.time}\n \
                         We look forward to seeing you!'
                     email_from = 'theescaperoomldn@gmail.com'
                     recipient_list = [email_to, ]
@@ -128,9 +132,11 @@ def delete_booking(request, booking_id):
         booking.delete()
         email_to = booking.email
         subject = 'Your booking'
-        message = f'Hi {booking.first_name}, your booking on\
-                {booking.date} for {booking.room_name}\
-                at {booking.time} has been cancelled.\
+        message = f'Hi {booking.first_name},\n your booking has \
+                been cancelled:\n\
+                \tDATE:{booking.date}\n \
+                \tROOM:{booking.room_name}\n \
+                \tTIME{booking.time}\n \
                 We hope to see you soon'
         email_from = 'theescaperoomldn@gmail.com'
         recipient_list = [email_to, ]
