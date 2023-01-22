@@ -96,8 +96,8 @@ def update_booking(request, booking_id):
                     form.save()
                     email_to = booking.email
                     subject = 'Your booking'
-                    message = f'Hi {booking.first_name},\n\nYour booking has\
-                        been updated:\n\n\
+                    message = f'Hi {booking.first_name},\n\n\
+                        Your booking has been updated:\n\n\
                         DATE:{booking.date}\n \
                         ROOM:{booking.room_name}\n \
                         TIME{booking.time}\n \
