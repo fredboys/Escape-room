@@ -102,7 +102,7 @@ def update_booking(request, booking_id):
                     # recipient_list = [email_to, ]
                     # send_mail(subject, message, email_from, recipient_list)
                     messages.success(request, 'Updated successfully!')
-                    return redirect('home')
+                    return redirect('account')
                 else:
                     error_message = "That slot is not available"
     else:
