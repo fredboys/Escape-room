@@ -4,7 +4,7 @@
 {% load static %}
 <div class="hero">
     <div>
-        <img src="https://res.cloudinary.com/drzze0oic/image/upload/v1673635478/escape_room_fzfhys.jpg" class="img-fluid hero-image"
+        <img src="{% static 'images/hero-image.webp' %}" class="img-fluid hero-image size"
             alt="welcome text message">
     </div>
     <div class="welcome-text centered">
@@ -27,8 +27,8 @@
             <div class="card">
                 <div>
                     <div class="card-image">
-                        <img
-                            src="https://res.cloudinary.com/drzze0oic/image/upload/v1673862050/ghost_2_kat5o8.jpg"
+                        <img class="size"
+                            src="{% static 'images/ghost-image.webp' %}"
                             alt="Image of an empty train">
                     </div>
                     <h5 class="card-heading">
@@ -50,8 +50,8 @@
             <div class="card">
                 <div>
                     <div class="card-image">
-                        <img
-                            src="https://res.cloudinary.com/drzze0oic/image/upload/v1673633795/eocp9feyrfd5tvw2oobp.jpg" 
+                        <img class="size"
+                            src="{% static 'images/royalthrone-image.webp' %}" 
                             alt="Image of the inside of a golden royal cathedral">
                     </div>
                     <h5 class="card-heading">
@@ -73,8 +73,8 @@
             <div class="card">
                 <div>
                     <div class="card-image">
-                        <img
-                            src="https://res.cloudinary.com/drzze0oic/image/upload/v1673865745/wood_jbh7ar.jpg"
+                        <img class="size"
+                            src="{% static 'images/wood-image.webp' %}"
                             alt="Image of a spooky woods">
                     </div>
                     <h5 class="card-heading">
@@ -108,7 +108,7 @@
         </div>
         <div class="col-12 col-md-6 mt-3 mt-md-0 p-lg-5 row">
             <img class="img-fluid my-auto"
-                src="https://res.cloudinary.com/drzze0oic/image/upload/v1673635650/about_us_ttwv5o.jpg"
+                src="{% static 'images/aboutus-image.webp' %}"
                 alt="image of about us">
         </div>
     </div>

@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
@@ -66,6 +66,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 MESSAGE_TAGS = {
     messages.SUCCESS: 'alert-success'
 }
+
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
