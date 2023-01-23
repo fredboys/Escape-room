@@ -38,6 +38,8 @@ This is a booking application for an escape room company. If the consumer would 
     * [Updated message](#updated-message)
     * [Admin panel](#admin-panel)
     * [404 Page](#404-page)
+    * [Responsive](#responsive)
+    * [Future features](#future-features)
 
 * [Testing](#testing)
     * [Lighthouse](#lighthouse)
@@ -289,6 +291,35 @@ Here the admin can alter any of the information about the rooms including the na
 This is the page the users will be shown if they have an incorrect url for whatever reason. they will have a link they can press to take them back to the home page.
 
 ![404 page](static/readme/escaperoom-404.jpg)
+
+## Responsive
+
+To prove my responsiveness of my page, I have screenshots of what the main features look like on a mobile.
+
+* Header
+    * Here the navbar links form into a dropdown making it good UX.
+
+![Header](static/readme/responsive-header.jpg)
+
+* Most popular rooms
+    * The imagery and description goes into a column order
+
+![Most popular rooms](static/readme/responsive-popular.jpg)
+
+* About us
+    * The imagery and description goes into a column order
+
+![About us](static/readme/responsive-about.jpg)
+
+* Footer
+    * It takes order in a column form
+
+![Footer](static/readme/responsive-footer.jpg)
+
+* Rooms
+    * * The imagery, description and details goes into a column order
+
+![Rooms](static/readme/responsive-room.jpg)
 
 ## Future Features
 
