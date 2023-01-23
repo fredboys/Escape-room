@@ -43,6 +43,10 @@ This is a booking application for an escape room company. If the consumer would 
 
 * [Testing](#testing)
     * [Lighthouse](#lighthouse)
+    * [HTML Validator](#html-validator)
+    * [CSS Validator](#css-validator)
+    * [Python Validator](#python-validator)
+    * [Javascript](#jshint-validator)
     * [Manual](#manual)
 
 * [Security Features](#security-features)
@@ -354,13 +358,45 @@ The application has been tested with Chrome Dev Tools Lighthouse Testing which t
 
 When running my HTML code through the [HTML Validation service](https://validator.w3.org/), I encountered a few minor errors that have now all be corrected.
 
-This is the base/index.html page -
+This is the home page -
 
 ![HTML error index page](static/readme/escaperoom-html1.jpg)
+
+Fixed
+
+![Home page fix](static/readme/html-test1.jpg)
 
 This is the rooms page -
 
 ![HTML room page](static/readme/escaperoom-html2.jpg)
+
+Fixed
+
+![Room page fix](static/readme/html-test2.jpg)
+
+This is the booking page
+
+![Booking page](static/readme/html-test3.jpg)
+
+This is the account with booking page
+
+![Account with booking](static/readme/html-test4.jpg)
+
+This is the account without bookings page
+
+![Account without booking](static/readme/html-test5.jpg)
+
+This is the thank you page
+
+![Thank you](static/readme/html-test6.jpg)
+
+This is the 404 error page
+
+![404 page](static/readme/html-test7.jpg)
+
+This is the 500 error page
+
+![500 page](static/readme/html-test8.jpg)
 
 ## CSS Validator
 When running my CSS code through the [CSS Validation service](https://jigsaw.w3.org/css-validator/) I had no bugs.
