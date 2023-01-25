@@ -42,17 +42,17 @@ def booking(request):
                 booking.user = request.user
                 booking.save()
                 booked = True
-                email_to = booking.email
-                subject = 'Your booking'
-                message = f'Hi {booking.first_name},\n\n\
-                        Your booking has been placed:\n\n\
-                        DATE:{booking.date}\n\
-                        ROOM:{booking.room_name}\n\
-                        TIME:{booking.time}\n\
-                        We look forward to seeing you!'
-                email_from = 'theescaperoomldn@gmail.com'
-                recipient_list = [email_to, ]
-                send_mail(subject, message, email_from, recipient_list)
+                # email_to = booking.email
+                # subject = 'Your booking'
+                # message = f'Hi {booking.first_name},\n\n\
+                #         Your booking has been placed:\n\n\
+                #         DATE:{booking.date}\n\
+                #         ROOM:{booking.room_name}\n\
+                #         TIME:{booking.time}\n\
+                #         We look forward to seeing you!'
+                # email_from = 'theescaperoomldn@gmail.com'
+                # recipient_list = [email_to, ]
+                # send_mail(subject, message, email_from, recipient_list)
             else:
                 error = "This slot is not available"
 
@@ -94,17 +94,17 @@ def update_booking(request, booking_id):
                 if not booking.is_time_taken():
                     error_message = None
                     form.save()
-                    email_to = booking.email
-                    subject = 'Your booking'
-                    message = f'Hi {booking.first_name},\n\n\
-                        Your booking has been updated:\n\n\
-                        DATE:{booking.date}\n\
-                        ROOM:{booking.room_name}\n\
-                        TIME:{booking.time}\n\
-                        We look forward to seeing you!'
-                    email_from = 'theescaperoomldn@gmail.com'
-                    recipient_list = [email_to, ]
-                    send_mail(subject, message, email_from, recipient_list)
+                    # email_to = booking.email
+                    # subject = 'Your booking'
+                    # message = f'Hi {booking.first_name},\n\n\
+                    #     Your booking has been updated:\n\n\
+                    #     DATE:{booking.date}\n\
+                    #     ROOM:{booking.room_name}\n\
+                    #     TIME:{booking.time}\n\
+                    #     We look forward to seeing you!'
+                    # email_from = 'theescaperoomldn@gmail.com'
+                    # recipient_list = [email_to, ]
+                    # send_mail(subject, message, email_from, recipient_list)
                     messages.success(request, 'Updated successfully!')
                     return redirect('account')
                 else:
@@ -130,18 +130,18 @@ def delete_booking(request, booking_id):
     is_authenticated = request.user.is_authenticated and booking.user.id == request.user.id
     if is_authenticated:
         booking.delete()
-        email_to = booking.email
-        subject = 'Your booking'
-        message = f'Hi {booking.first_name},\n\n\
-            Your booking has been cancelled:\n\n\
-            DATE:{booking.date}\n\
-            ROOM:{booking.room_name}\n\
-            TIME:{booking.time}\n\
-            We hope to see you soon'
-        email_from = 'theescaperoomldn@gmail.com'
-        recipient_list = [email_to, ]
-        send_mail(subject, message, email_from, recipient_list)
-        messages.success(request, 'Cancellation successfully!')
+        # email_to = booking.email
+        # subject = 'Your booking'
+        # message = f'Hi {booking.first_name},\n\n\
+        #     Your booking has been cancelled:\n\n\
+        #     DATE:{booking.date}\n\
+        #     ROOM:{booking.room_name}\n\
+        #     TIME:{booking.time}\n\
+        #     We hope to see you soon'
+        # email_from = 'theescaperoomldn@gmail.com'
+        # recipient_list = [email_to, ]
+        # send_mail(subject, message, email_from, recipient_list)
+        messages.success(request, 'Cancellation successful!')
         return redirect('account')
     else:
         return render(request, '500.html')

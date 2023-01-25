@@ -559,6 +559,12 @@ I manually tested all buttons, forms and links to make sure the correct action t
 
 ![Email code](static/readme/escaperoom-bugemail.jpg)
 
+* I also had a bug with my messages. If a user were to sign in and sign out, then sign in to another account you would get a long list of messages appear on the my bookings page.
+
+![Message bug](static/readme/escaperoom-bugmessage.jpg)
+
+* To fix this I moved my for message loop out of my_booking.html into the base.html. This meant that the message would appear one at a time instead of a build up of messages once you opened the my_booking.html.
+
 ## Left to solve
 
 There are no more bugs to solve as of 18/01/2023

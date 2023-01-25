@@ -4,14 +4,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-8 col-sm-12 mx-auto text-center">
-      
-      {% for message in messages %}
-      <div class="alert {{ message.tags }} alert-success fade show success-msg" id="msg" role="alert">
-        <strong>{{message}}</strong>
-      </div>
-      {% endfor %}
-      
+    <div class="col-md-8 col-sm-12 mx-auto text-center">      
       <h1 class="text-center confirmation-header" style="margin: 3%;">My Bookings</h1>
       {% for booking in bookings %}
       {% if forloop.first %}
@@ -50,11 +43,4 @@
     </div>
   </div>
 </div>
-<script>
-  setTimeout(function(){
-    let messages = document.getElementById("msg");
-    let alert = new bootstrap.Alert(messages);
-    alert.close();
-  }, 3000);
-</script>
 {% endblock %}
