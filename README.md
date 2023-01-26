@@ -434,7 +434,7 @@ When running my JavaScript through [JSHint validator](https://jshint.com/) I had
 
 ![Javascript screenshot](static/readme/escaperoom-js.jpg)
 
-* This is for the map. Only one unused variable but it wasnt an error.
+* This is for the map. I have a couple undefined variable however I used this website to write the code. [Google maps code](https://developers.google.com/maps/documentation/javascript/adding-a-google-map)
 
 ![Javascript maps screenshot](static/readme/escaperoom-jsvalidator.jpg)
 

@@ -1,30 +1,17 @@
 // This function initialize the Google maps API and sets the Cluster to my desired coordinates
 function initMap() {
 
-    var map = new Map(document.getElementById("map"), {
-      zoom: 15,
-      center: {
-        lat: 51.509865,
-        lng: -0.118092
-      }
-    });
+  const room = { lat: 51.509865, lng: -0.118092 };
 
-    var label = "Escape Room";
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: room
+  });
 
-    var locations = [{
-        lat: 51.509865,
-        lng: -0.118092
-      },
-    ];
+  const marker = new google.maps.Marker({
+    position: room,
+    map: map,
+  });
+}
 
-    var markers = locations.map(function (location, i) {
-      return new markers({
-        position: location,
-        label: label
-      });
-    });
-
-    var markerCluster = new markerCluster(map, markers, {
-      imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-    });
-  }
+  window.initMap = initMap;
