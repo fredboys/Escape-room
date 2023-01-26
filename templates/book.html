@@ -4,12 +4,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-      <!-- Shows the form only is user is logged in -->
+      <!-- User authenticated -->
       {% if user.is_authenticated %}
+        <!-- If there hasnt been a booking -->
         {% if not booked %}
  
           <div class="container login-text">
             <div class=" booking-text">
+              <!-- Double booking error message -->
               {% if error %}
               <h1 class="alert alert-success success-msg error-msg">{{error}}</h1>
               {% endif %}
@@ -22,6 +24,7 @@
                 </form>
             </div>
           </div>
+          <!-- Confimation message -->
         {% else %}
         <div class="box">
         <div class=" confirmation center">
@@ -32,6 +35,7 @@
         </div>
         </div>
         {% endif %}
+      <!-- Not authenticated -->  
       {% else %}
       <div class="container">
         <div class=" booking-text">      

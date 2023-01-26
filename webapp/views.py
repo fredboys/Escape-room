@@ -37,7 +37,9 @@ def booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         booking = form.save(commit=False)
+        # booking can be made: save & send email
         if form.is_valid():
+            # checks for double booking
             if not booking.is_time_taken():
                 booking.user = request.user
                 booking.save()
@@ -53,6 +55,7 @@ def booking(request):
                 email_from = 'theescaperoomldn@gmail.com'
                 recipient_list = [email_to, ]
                 send_mail(subject, message, email_from, recipient_list)
+            # error message for double booking
             else:
                 error = "This slot is not available"
 
@@ -85,12 +88,15 @@ def update_booking(request, booking_id):
     """
     booking = Booking.objects.get(id=booking_id)
     is_authenticated = request.user.is_authenticated and booking.user.id == request.user.id
+    # only users owning the booking can update it
     if is_authenticated:
         error_message = None
         form = BookingForm(instance=booking)
         if request.method == 'POST':
             form = BookingForm(request.POST, instance=booking)
+            # booking can be made: save & send email
             if form.is_valid():
+                # checks for double booking
                 if not booking.is_time_taken():
                     error_message = None
                     form.save()
@@ -105,9 +111,11 @@ def update_booking(request, booking_id):
                     email_from = 'theescaperoomldn@gmail.com'
                     recipient_list = [email_to, ]
                     send_mail(subject, message, email_from, recipient_list)
+                    # send update message
                     messages.success(request, 'Updated successfully!')
                     return redirect('account')
                 else:
+                    # double booking error message
                     error_message = "That slot is not available"
     else:
         return render(request, '500.html')
@@ -128,6 +136,7 @@ def delete_booking(request, booking_id):
     """
     booking = Booking.objects.get(id=booking_id)
     is_authenticated = request.user.is_authenticated and booking.user.id == request.user.id
+    # only users owning the booking can delete it
     if is_authenticated:
         booking.delete()
         email_to = booking.email
@@ -141,6 +150,7 @@ def delete_booking(request, booking_id):
         email_from = 'theescaperoomldn@gmail.com'
         recipient_list = [email_to, ]
         send_mail(subject, message, email_from, recipient_list)
+        # Send cancel message
         messages.success(request, 'Cancellation successful!')
         return redirect('account')
     else:
@@ -156,5 +166,7 @@ def error_404_view(request, exception):
 
 
 def handler500(request, *args, **argv):
+    """
+    Displays 500.html path
+    """
     return render(request, '500.html')
-    

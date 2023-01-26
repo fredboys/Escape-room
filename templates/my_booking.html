@@ -6,6 +6,7 @@
   <div class="row">
     <div class="col-md-8 col-sm-12 mx-auto text-center">      
       <h1 class="text-center confirmation-header" style="margin: 3%;">My Bookings</h1>
+      <!-- List users bookings -->
       {% for booking in bookings %}
       {% if forloop.first %}
       <div class="card" style="width: 100%; margin-bottom: 10px;">
@@ -36,6 +37,7 @@
         </div>
       </div>
       {% endif %}
+      <!-- If user has no bookings -->
       {% empty %}
       <p class="no-bookings">You have no bookings</p>
       <a href="{% url 'book' %}" class="btn btn-primary booking-button right no-booking-btn">Book A Room</a>
