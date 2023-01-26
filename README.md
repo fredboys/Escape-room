@@ -430,7 +430,13 @@ This is in my webapp - views.py
 ## JSHint Validator
 When running my JavaScript through [JSHint validator](https://jshint.com/) I had no bugs or erros.
 
+* This is for the datepicker
+
 ![Javascript screenshot](static/readme/escaperoom-js.jpg)
+
+* This is for the map
+
+![Javascript maps screenshot](static/readme/escaperoom-jsvalidator.jpg)
 
 ## Defects
 
