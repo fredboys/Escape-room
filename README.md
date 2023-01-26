@@ -47,6 +47,7 @@ This is a booking application for an escape room company. If the consumer would 
     * [CSS Validator](#css-validator)
     * [Python Validator](#python-validator)
     * [Javascript](#jshint-validator)
+    * [Defects](#defects)
     * [Manual](#manual)
 
 * [Security Features](#security-features)
@@ -331,6 +332,7 @@ To prove my responsiveness of my page, I have screenshots of what the main featu
 * Have times solved for each room that is updated by each visit
 * Automate Top times for each room
 * Make emails easier to read
+* Phone numbers can accept letters however it is low level as the email is more reliable. Update to allow only numbers
 
 # Testing
 
@@ -429,6 +431,10 @@ This is in my webapp - views.py
 When running my JavaScript through [JSHint validator](https://jshint.com/) I had no bugs or erros.
 
 ![Javascript screenshot](static/readme/escaperoom-js.jpg)
+
+## Defects
+
+Phone number allows the user to add letters. This is ok as its low level. The email is more reliable and will be used to contact the user first.
 
 ## Manual
 
@@ -529,6 +535,15 @@ I manually tested all buttons, forms and links to make sure the correct action t
 
 * Users cannot deduce the update ulr and update others’ bookings, they get a custom 500 error page if they attempt to do this.
 
+* Booking Update: Message Failure trying to book a time already booked
+* Booking Update: Message failure if not logged in
+* Booking Update: Message failure if they dont own booking
+* Booking Cancel: Message Failure if not logged in
+* Booking Cancel: Message failure if they dont own booking
+* Place Booking: User not logged in
+* Place Booking: Time & room already booked
+* 500 Page: This can be activated for many reasons, but you are able to get there if you try to delete a booking that you don’t own, or if you try to access a booking that doesn’t exist
+
 ## User authentication
 * Django's all auth was used for login and sign up functionality.
 * Django's superuser is used to limit access to admin panel.
@@ -599,6 +614,7 @@ I used the following website to get my free stock images from -
 * [Am I Responsive](https://ui.dev/amiresponsive) - Used to generate mockup of my webpage.
 * [Cloudinary](https://cloudinary.com/) - Used to host all static files and images.
 * [Heroku](https://id.heroku.com/login) - Used to deploy the website.
+* [ElephantSQL](https://www.elephantsql.com/) - Used to host my database
 * [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to validate Python code.
 * [HTML Validation](https://validator.w3.org/) - Used to validate HTML code.
 * [CSS Validation](https://jigsaw.w3.org/css-validator/) - Used to validate CSS code.
@@ -641,15 +657,15 @@ Escape room is deployed to Heroku, using an ElephantSQL Postgres database. To du
 After you have forked the project for your own, continue these steps as follows -
 
 * You will need a Cloudinary account to host user images and static files.
-* Login to Cloudinary.
+* Login to [Cloudinary](https://cloudinary.com/).
 * Select the 'dashboard' option.
 * Copy the value of the 'API Environment variable' from the part starting cloudinary:// to the end. You may need to select the eye icon to view the full environment variable.Paste this value somewhere for safe keeping as you will need it shortly (but destroy after deployment).
-* Log in to Heroku.
+* Log in to [Heroku](https://id.heroku.com/login).
 * Select 'Create new app' from the 'New' menu at the top right.
 * Enter a name for the app and select the appropriate region.
 * Select 'Create app'.
 * Select 'Settings' from the menu at the top.
-* Login to ElephantSQL.
+* Login to [ElephantSQL](https://www.elephantsql.com/).
 * Click 'Create new instance' on the dashboard.
 * Name the 'plan' and select the 'Tiny Turtle (free)' plan.
 * Select 'select region'.
